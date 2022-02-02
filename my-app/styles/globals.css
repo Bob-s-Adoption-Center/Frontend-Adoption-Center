@@ -11,6 +11,22 @@ a {
   text-decoration: none;
 }
 
+ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+.profile-top {
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile-top 
+
 * {
   box-sizing: border-box;
 }
