@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import './api/dogs'
-import {useEffect} from 'react'
+import {Component, useEffect} from 'react'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return <Component {...pageProps} />
+
 }
 
 export default MyApp
