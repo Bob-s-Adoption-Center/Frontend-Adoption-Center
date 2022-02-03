@@ -1,4 +1,4 @@
-const profile = () =>{
+const profile = (props) =>{
     return (
 <div class="container-fluid">
     <header>
