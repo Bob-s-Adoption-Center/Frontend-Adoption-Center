@@ -1,4 +1,4 @@
-const profile = (props) =>{
+const profile = ({dogs}) =>{
     return (
 <div class="container-fluid">
     <header>
@@ -15,7 +15,7 @@ const profile = (props) =>{
             <img className="dog-img" alt="cute dog"/>
             <h2>Dog's Name</h2>
         </div>
-        <h2>About Me:</h2>
+        <h2>About Me:{dogs.name}</h2>
         <p>Bob is cool. (description)</p>
         <h2>Additional Details:</h2>
 

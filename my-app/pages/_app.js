@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
 
   async function fetchDogs() {
     try {
-      const res = await fetch('http://localhost:3001/', {
+      const res = await fetch('http://localhost:3001/dogs', {
         method: 'GET',
       });
       const data = await res.json();
@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div className="App">
-      <Component {...pageProps} />
+      <Component dogs={dogs} {...pageProps} />
   </div>
   )
 }
