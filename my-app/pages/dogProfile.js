@@ -1,4 +1,17 @@
-const profile = () =>{
+// This function maps through all backend dog objects given the specified data
+
+//dogs is the array within the database while dog serves as the shorthand data attirbute to access the array of dogs
+
+//Consider using a different method than map to find a single dog from the dog array such as findOne() or filter()
+
+// {dogs.map(dog => (
+//     <div>
+//     <p key={dog.id}>{dog.name}</p>
+//     {/* <img key={dog.image} src={dog.image}></img> */}
+//     </div>
+// ))}
+
+const profile = ({dogs}) =>{
     return (
 <div class="container-fluid">
     <header>

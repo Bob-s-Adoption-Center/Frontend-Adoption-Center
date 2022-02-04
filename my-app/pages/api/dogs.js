@@ -1,13 +1,10 @@
-import {useEffect, useState} from 'react'
-
-const dogAPI = async () => {
-    const [dogState, setDog] = useState([])
-
-    useEffect(async () => {
-        const res = await fetch('http://localhost:3001/')
+export async function getStaticProps() {
+        const res = await fetch('https://api.petfinder.com/v2/animals')
         const data = await res.json()
         console.log(data)
-    })
+        return {
+            props: {
+              dogApi,
+            },
+        }
 }
-
-export default dogAPI;
