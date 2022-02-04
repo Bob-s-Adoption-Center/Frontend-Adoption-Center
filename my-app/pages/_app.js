@@ -8,6 +8,8 @@ function MyApp({ Component, pageProps }) {
   //SetDog is the function that sets state,
   //useState sets default value of the state as an argument to useState
   const [dogs, setDog] = useState([])
+  
+  const [dogApi, setDogApi] = useState([])
 
   async function fetchDogs() {
     const res = await fetch('http://localhost:3001/dogs')
@@ -15,14 +17,21 @@ function MyApp({ Component, pageProps }) {
     setDog(data)
   }
 
+//   async function fetchApi() {
+//     const res = await fetch('https://api.petfinder.com/v2/animals')
+//     const data = await res.json()
+//     setDogApi(data)
+// }
+
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
     fetchDogs();
+    // fetchApi();
   }, []);
 
   return (
     <div className="App">
-      <Component dogs={dogs} {...pageProps} />
+      <Component dogApi={dogApi} dogs={dogs} {...pageProps} />
   </div>
   )
 }

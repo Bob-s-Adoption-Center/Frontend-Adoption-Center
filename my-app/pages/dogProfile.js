@@ -1,3 +1,16 @@
+// This function maps through all backend dog objects given the specified data
+
+//dogs is the array within the database while dog serves as the shorthand data attirbute to access the array of dogs
+
+//Consider using a different method than map to find a single dog from the dog array such as findOne() or filter()
+
+// {dogs.map(dog => (
+//     <div>
+//     <p key={dog.id}>{dog.name}</p>
+//     {/* <img key={dog.image} src={dog.image}></img> */}
+//     </div>
+// ))}
+
 const profile = ({dogs}) =>{
     return (
 <div class="container-fluid">
@@ -13,9 +26,7 @@ const profile = ({dogs}) =>{
         <div className="profile-top">
             <h1>Adopt Me!</h1>
             <img className="dog-img" alt="cute dog"/>
-            <h2>Dog's Name {dogs.map(dog => (
-                <p key={dog.id}>{dog.name}</p>
-            ))}</h2>
+            <h2>Dog's Name</h2>
         </div>
         <h2>About Me:</h2>
         <p>Bob is cool. (description)</p>
