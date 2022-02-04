@@ -10,16 +10,11 @@ function MyApp({ Component, pageProps }) {
   const [dogs, setDog] = useState([])
 
   async function fetchDogs() {
-    try {
-      const res = await fetch('http://localhost:3001/dogs', {
-        method: 'GET',
-      });
-      const data = await res.json();
-      setDog(data);
-    } catch(err) {
-      console.log(err);
-    }
+    const res = await fetch('http://localhost:3001/dogs')
+    const data = await res.json()
+    setDog(data)
   }
+
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
     fetchDogs();

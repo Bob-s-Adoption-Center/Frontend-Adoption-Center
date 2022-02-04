@@ -13,9 +13,11 @@ const profile = ({dogs}) =>{
         <div className="profile-top">
             <h1>Adopt Me!</h1>
             <img className="dog-img" alt="cute dog"/>
-            <h2>Dog's Name</h2>
+            <h2>Dog's Name {dogs.map(dog => (
+                <p key={dog.id}>{dog.name}</p>
+            ))}</h2>
         </div>
-        <h2>About Me:{dogs.name}</h2>
+        <h2>About Me:</h2>
         <p>Bob is cool. (description)</p>
         <h2>Additional Details:</h2>
 
