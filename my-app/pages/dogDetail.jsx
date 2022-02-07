@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
+
                 {/* {dogs.map((dog) => (
             <div>
                 <p key={dog.id}>{dog.name}</p> */}
@@ -10,61 +11,47 @@ import { useState, useEffect } from 'react';
             ))}   */}
  
 
-function DogDetail(dog) {
-    //const { dogId } = useParams();
+function DogDetail() {
+   
     const router = useRouter();
     const { dogId } = router.query;
+    console.log(router.query)
    
-
+//use state for data fetch or form submission (because handle change)
     const [dogState, setDogState] = useState({});
 
-    // const fetchDogDetail = async () => {
-    //     const res = await fetch(`http://localhost:3001/api/dogs/${dogId}`);
-    //     const data = await res.json();
-    //     setDogState(data);
-    // }
-
-    const getServerSideProps = async ({dogId}) => {
+    const fetchDogDetail = async () => {
         try {
             const res = await fetch(`http://localhost:3001/dogs/${dogId}`, {
                 method: 'GET'
             });
-            console.log(res);
-
             const data = await res.json();
-            console.log(data);
-
             setDogState(data.dog);
-            console.log(data.dog);
         } catch(err) {
             console.log(err);
         }
     }
 
-
-
-
     useEffect(() => {
-        getServerSideProps();
+        fetchDogDetail();
         }, [dogId]);
     
     return (
-                
+
             <div>
-           
+                <Link href="/dogs"><a>Back to Dogs</a></Link>
                 <div className="profile-top">
-                    <h1>{dogId}</h1>
                     <h1>Adopt Me!</h1>
-                    <img className="dog-img" alt="cute dog"/>
-                    <h2>Dog's Name {dogState.name}</h2>
+                    <img className="dog-img" alt={"photo of a " + "dog.color" + " " + dogState.breed + " named " + dogState.name}/>
+                    <h2>{dogState.name}</h2>
                 </div>
 
-                <h2>About Me:</h2>
-                <p>{dogState.description}</p>
+              <h2>About Me:</h2>
+               <p>{dogState.description}</p>
 
-                <h2>Additional Details:</h2>
+                 <h2>Additional Details:</h2>
 
-                <div className="row">
+                 <div className="row">
                 <div className="col-sm-6">
                     <div className="card text-center" >
                         <div className="card-body">
@@ -72,7 +59,7 @@ function DogDetail(dog) {
                                 <circle cx="50" cy="50" r="40" />
                             </svg>
                             <h5 className="card-title">Pet Adoption ID:</h5>
-                            <p className="card-text">A10651991</p>
+                            <p className="card-text">{dogState.id}</p>
                         </div>
                     </div>
                 </div>
@@ -83,7 +70,7 @@ function DogDetail(dog) {
                                 <circle cx="50" cy="50" r="40" />
                             </svg>
                             <h5 className="card-title">Breed:</h5>
-                            <p className="card-text">Pug</p>
+                            <p className="card-text">{dogState.breed}</p>
                         </div>
                     </div>
                 </div>
@@ -94,7 +81,7 @@ function DogDetail(dog) {
                                 <circle cx="50" cy="50" r="40" />
                             </svg>
                             <h5 className="card-title">Age:</h5>
-                            <p className="card-text">Adult</p>
+                            <p className="card-text">{dogState.age}</p>
                         </div>
                     </div>
                 </div>
@@ -105,16 +92,17 @@ function DogDetail(dog) {
                                 <circle cx="50" cy="50" r="40" />
                             </svg>
                             <h5 className="card-title">Gender:</h5>
-                            <p className="card-text">Male</p>
+                            <p className="card-text">{dogState.gender}</p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
 
 
-            </div>
+             </div>
        
     );
 }
+
 
 export default DogDetail;
