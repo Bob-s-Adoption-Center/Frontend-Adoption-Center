@@ -1,7 +1,9 @@
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.css'
-import './api/dogs'
-import {useEffect, useState} from 'react'
+import './api/oauth-token'
+import {useEffect, useState, createContext} from 'react'
+
+export const AuthContext = createContext();
 
 function MyApp({ Component, pageProps }) {
   //dogState is name of the state,
@@ -9,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   //useState sets default value of the state as an argument to useState
   const [dogs, setDog] = useState([])
   
-  const [dogApi, setDogApi] = useState([])
+  const [accessToken, setAccessToken] = useState(null)
 
   async function fetchDogs() {
     const res = await fetch('http://localhost:3001/dogs')
@@ -17,22 +19,22 @@ function MyApp({ Component, pageProps }) {
     setDog(data)
   }
 
-//   async function fetchApi() {
-//     const res = await fetch('https://api.petfinder.com/v2/animals')
-//     const data = await res.json()
-//     setDogApi(data)
-// }
-
   useEffect(() => {
+    const fetchAccessToken = async () => {
+      const res = await fetch('/api/oauth-token')
+      const json = await res.json();
+      setAccessToken(json.access_token)
+    };
+    fetchAccessToken()
     import("bootstrap/dist/js/bootstrap");
     fetchDogs();
-    // fetchApi();
   }, []);
 
   return (
-    <div className="App">
-      <Component dogApi={dogApi} dogs={dogs} {...pageProps} />
-  </div>
-  )
+<AuthContext.Provider value={accessToken}>
+      <Component dogs={dogs} {...pageProps} />
+</AuthContext.Provider>
+  );
 }
 export default MyApp;
+
