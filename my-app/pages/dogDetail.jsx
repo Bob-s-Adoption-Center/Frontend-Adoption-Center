@@ -24,7 +24,7 @@ function DogDetail(dog) {
     //     setDogState(data);
     // }
 
-    const getServerSideProps = async () => {
+    const getServerSideProps = async ({dogId}) => {
         try {
             const res = await fetch(`http://localhost:3001/dogs/${dogId}`, {
                 method: 'GET'
@@ -40,6 +40,9 @@ function DogDetail(dog) {
             console.log(err);
         }
     }
+
+
+
 
     useEffect(() => {
         getServerSideProps();
@@ -61,52 +64,52 @@ function DogDetail(dog) {
 
                 <h2>Additional Details:</h2>
 
-                {/* <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card text-center" >
-                            <div class="card-body">
-                                <svg width="100" height="100">
-                                    <circle cx="50" cy="50" r="40" />
-                                </svg>
-                                <h5 class="card-title">Pet Adoption ID:</h5>
-                                <p class="card-text">{dogState.id}</p>
-                            </div>
+                <div className="row">
+                <div className="col-sm-6">
+                    <div className="card text-center" >
+                        <div className="card-body">
+                            <svg width="100" height="100">
+                                <circle cx="50" cy="50" r="40" />
+                            </svg>
+                            <h5 className="card-title">Pet Adoption ID:</h5>
+                            <p className="card-text">A10651991</p>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="card text-center" >
-                            <div class="card-body">
-                                <svg width="100" height="100">
-                                    <circle cx="50" cy="50" r="40" />
-                                </svg>
-                                <h5 class="card-title">Breed:</h5>
-                                <p class="card-text">{dogState.breed}</p>
-                            </div>
+                </div>
+                <div className="col-sm-6">
+                    <div className="card text-center" >
+                        <div className="card-body">
+                            <svg width="100" height="100">
+                                <circle cx="50" cy="50" r="40" />
+                            </svg>
+                            <h5 className="card-title">Breed:</h5>
+                            <p className="card-text">Pug</p>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="card text-center" >
-                            <div class="card-body">
-                                <svg width="100" height="100">
-                                    <circle cx="50" cy="50" r="40" />
-                                </svg>
-                                <h5 class="card-title">Age:</h5>
-                                <p class="card-text">{dogState.age}</p>
-                            </div>
+                </div>
+                <div className="col-sm-6">
+                    <div className="card text-center" >
+                        <div className="card-body">
+                            <svg width="100" height="100">
+                                <circle cx="50" cy="50" r="40" />
+                            </svg>
+                            <h5 className="card-title">Age:</h5>
+                            <p className="card-text">Adult</p>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="card text-center" >
-                            <div class="card-body">
-                                <svg width="100" height="100">
-                                    <circle cx="50" cy="50" r="40" />
-                                </svg>
-                                <h5 class="card-title">Gender:</h5>
-                                <p class="card-text">{dogState.gender}</p>
-                            </div>
+                </div>
+                <div className="col-sm-6">
+                    <div className="card text-center" >
+                        <div className="card-body">
+                            <svg width="100" height="100">
+                                <circle cx="50" cy="50" r="40" />
+                            </svg>
+                            <h5 className="card-title">Gender:</h5>
+                            <p className="card-text">Male</p>
                         </div>
                     </div>
-                </div>  */}
+                </div>
+            </div>
 
 
             </div>
