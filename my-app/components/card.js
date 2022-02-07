@@ -1,6 +1,6 @@
 import '../pages/_app'
 
-const card = ({dogs, results}) => {
+const Card = ({dogs, results}) => {
     return (
 <div className="card">
   <img src={results[0].photos['full']} className="card-img-top" alt="No image" />
@@ -14,4 +14,4 @@ const card = ({dogs, results}) => {
     )
 }
 
-export default card;
+export default Card;

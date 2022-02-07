@@ -20,18 +20,9 @@ function DogList() {
         }, []);
 
     return (
-        // <div>Hello World!</div>
-//////Martin's code
-        // {Dog.map(dog => (
-        //     <div>
-        //     <p key={dog.id}>{dog.name}</p>
-        //     {/* <img key={dog.image} src={dog.image}></img> */}
-        //     </div>
-        // ))}
-/////Michael's code
+
         <div>
             {allDogState.map((dog) => {
-                //see if different in next.js
                 return <Dog key={dog.id} dog={dog}/>
             })}
         </div>
