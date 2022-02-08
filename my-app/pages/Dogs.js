@@ -1,4 +1,10 @@
+import {useRouter} from 'next/router'
+
 const dogs = () => {
+
+const router = useRouter();
+const dogId = router.query.dogId;
+
     return (
         <div class="container-fluid">
             <main>
