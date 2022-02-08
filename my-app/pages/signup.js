@@ -16,10 +16,11 @@ const signup = () => {
   };
 
   return (
-    <main className="form-signin">
-          <img class="signInImage" src="./img/dog-banner.png" alt="10 dogs sitting alongside side each other serving as the sign in page banner" width="275" height="75"></img>
+    <main className="signInLayout">
+    <div className="form-signin">
+          <img className="signInImage" src="./img/dog-banner.png" alt="10 dogs sitting alongside side each other serving as the sign in page banner" width="275" height="75"></img>
         <form action="/signup" method="post">
-        <h1 className="h3 mb-3 fw-normal" style={{textAlign: "center"}}><strong>Welcome! Please sign up</strong></h1>
+          <h1 className="h3 mb-3 fw-normal" style={{textAlign: "center"}}>Welcome Back! Please sign up</h1>
           <div className="form-floating">
             <input
               type="email"
@@ -30,7 +31,7 @@ const signup = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              autoComplete="current-email"
+              autoComplete="email"
             />
             <label htmlFor="email">Email address</label>
           </div>
@@ -61,8 +62,9 @@ const signup = () => {
           >
             Sign up
           </button>
-          <p className="mt-5 mb-3 text-muted" style={{textAlign: "center"}}>&copy; 2017–2022</p>
+          <p className="mt-5 mb-3" style={{textAlign: "center"}}>&copy; 2017–2022</p>
         </form>
+    </div>
     </main>
   );
 };
