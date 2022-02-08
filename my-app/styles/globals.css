@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+#backLink {
+  text-decoration: none;
+}
+
 ul {
   display: flex;
   list-style-type: none;
@@ -18,13 +22,28 @@ ul {
 }
 
 .profile-top {
-  height: 10em;
+  padding-top: 20%vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
+<<<<<<< HEAD
 .profile-top * {
+=======
+.profile-top h2 {
+  padding-top: 50%vh;
+}
+
+.profile-top 
+
+* {
+>>>>>>> 64f6223ef5a29e17146ff596c0388250e4144a87
   box-sizing: border-box;
 }
+
+.sectionTag {
+  padding: 50%vw;
+}
+
