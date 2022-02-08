@@ -2,22 +2,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
-
-                {/* {dogs.map((dog) => (
-            <div>
-                <p key={dog.id}>{dog.name}</p> */}
-                {/* <img key={dog.image} src={dog.image}></img> */}
-            {/* </div>
-            ))}   */}
- 
-
 function DogDetail() {
    
     const router = useRouter();
     const { dogId } = router.query;
-    console.log(router.query)
    
-//use state for data fetch or form submission (because handle change)
+    //use state for data fetch or form submission (because handle change)
     const [dogState, setDogState] = useState({});
 
     const fetchDogDetail = async () => {
@@ -35,6 +25,9 @@ function DogDetail() {
     useEffect(() => {
         fetchDogDetail();
         }, [dogId]);
+
+    const imgRef = React.useRef();    
+
     
     return (
         dogState
@@ -44,7 +37,33 @@ function DogDetail() {
                 <Link href="/dogs"><a id="backLink">Back to Dogs</a></Link>
                 <div className="profile-top">
                     <h1>Adopt Me!</h1>
-                    <img src={dogState.image} alt={"photo of a " + "dogState.color" + " " + dogState.breed + " named " + dogState.name}/>
+                    <div>
+                    {(() => {
+                        if (dogState.Image) {
+                        return (
+                            <div class="circular--landscape">
+                                <img class="circular--square" ref={imgRef} src={dogState.image} alt={"photo of a " + "dogState.color" + " " + dogState.breed + " named " + dogState.name}/>
+                            </div>
+                        )
+                        } else if (otherCase) {
+                        return (
+                            <div class="circular--portrait">
+                                <img class="circular--square" src={dogState.image} alt={"photo of a " + "dogState.color" + " " + dogState.breed + " named " + dogState.name}/>
+                            </div>
+                        )
+                        } else {
+                        return (
+                            <div class="circular--square">
+                                <img class="circular--square" src={dogState.image} alt={"photo of a " + "dogState.color" + " " + dogState.breed + " named " + dogState.name}/>
+                            </div>
+                        )
+                        }
+                    })()}
+                    </div>
+                    {/* <div class="circular--landscape">
+                        <img class="circular--square" src={dogState.image} alt={"photo of a " + "dogState.color" + " " + dogState.breed + " named " + dogState.name}/>
+                    </div> */}
+
                     <h2>{dogState.name}</h2>
                 </div>
 

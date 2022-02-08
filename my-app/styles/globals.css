@@ -29,19 +29,27 @@ ul {
   flex-direction: column;
 }
 
-<<<<<<< HEAD
-.profile-top * {
-=======
 .profile-top h2 {
   padding-top: 50%vh;
 }
 
-.profile-top 
 
 * {
->>>>>>> 64f6223ef5a29e17146ff596c0388250e4144a87
   box-sizing: border-box;
 }
+
+.circular--square {
+  border-radius: 50%;
+}
+
+.circular--landscape { display: inline-block; position: relative; width: 200px; height: 200px; overflow: hidden; border-radius: 50%; } 
+
+.circular--landscape img { width: auto; height: 100%; margin-left: -50px; }
+
+.circular--portrait { position: relative; width: 200px; height: 200px; overflow: hidden; border-radius: 50%; } 
+
+.circular--portrait img { width: 100%; height: auto; }
+
 
 .sectionTag {
   padding: 50%vw;
