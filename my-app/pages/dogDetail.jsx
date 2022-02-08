@@ -37,6 +37,8 @@ function DogDetail() {
         }, [dogId]);
     
     return (
+        dogState
+        ?
 
             <div>
                 <Link href="/dogs"><a>Back to Dogs</a></Link>
@@ -98,8 +100,9 @@ function DogDetail() {
                 </div>
             </div> 
 
-
-             </div>
+        </div>
+        :
+        <p>woof! woof! loading...</p>
        
     );
 }
