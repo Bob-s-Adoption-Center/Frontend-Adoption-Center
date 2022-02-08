@@ -17,11 +17,10 @@ const signin = () => {
     console.log("success");
   };
   return (
-    <main>
-      <div className="form-signup">
+    <main className="form-signin">
+          <img class="signInImage" src="./img/dog-banner.png" alt="10 dogs sitting alongside side each other serving as the sign in page banner" width="275" height="75"></img>
         <form action="/signup" method="post">
-          <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
-
+          <h1 className="h3 mb-3 fw-normal" style={{textAlign: "center"}}><strong>Welcome Back! Please sign in</strong></h1>
           <div className="form-floating">
             <input
               type="email"
@@ -32,9 +31,9 @@ const signin = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              autoComplete="current-email"
+              autoComplete="email"
             />
-            <label for="email">Email address</label>
+            <label htmlFor="email">Email address</label>
           </div>
           <div className="form-floating">
             <input
@@ -48,7 +47,7 @@ const signin = () => {
               required
               autoComplete="current-password"
             />
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
           </div>
 
           <div className="checkbox mb-3">
@@ -57,15 +56,14 @@ const signin = () => {
             </label>
           </div>
           <button
-            onClick={handleSignUp}
+            onClick={handleSignIn}
             className="w-100 btn btn-lg btn-primary"
             type="submit"
           >
             Sign in
           </button>
-          <p className="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+          <p className="mt-5 mb-3 text-muted" style={{textAlign: "center"}}>&copy; 2017–2022</p>
         </form>
-      </div>
     </main>
   );
 };

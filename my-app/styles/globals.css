@@ -29,9 +29,6 @@ ul {
   flex-direction: column;
 }
 
-<<<<<<< HEAD
-.profile-top * {
-=======
 .profile-top h2 {
   padding-top: 50%vh;
 }
@@ -39,7 +36,6 @@ ul {
 .profile-top 
 
 * {
->>>>>>> 64f6223ef5a29e17146ff596c0388250e4144a87
   box-sizing: border-box;
 }
 
