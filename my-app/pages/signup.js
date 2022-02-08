@@ -1,4 +1,20 @@
+import { useState } from "react";
+
 const signup = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    fetch('http://localhost:3001/signup', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email: email,
+        password: password
+    })
+    })
+    }
   return (
     <main>
       <div className="form-signup" >
@@ -12,6 +28,8 @@ const signup = () => {
               id="email"
               name="email"
               placeholder="name@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <label for="email">Email address</label>
           </div>
@@ -22,6 +40,8 @@ const signup = () => {
               id="password"
               name="password"
               placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <label for="password">Password</label>
           </div>
@@ -31,7 +51,7 @@ const signup = () => {
               <input type="checkbox" value="remember-me" /> Remember me
             </label>
           </div>
-          <button className="w-100 btn btn-lg btn-primary" type="submit">
+          <button onClick={handleSignUp} className="w-100 btn btn-lg btn-primary" type="submit">
             Sign up
           </button>
           <p className="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
