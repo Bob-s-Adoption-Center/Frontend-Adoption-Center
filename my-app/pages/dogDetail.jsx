@@ -41,17 +41,17 @@ function DogDetail() {
         ?
 
             <div>
-                <Link href="/dogs"><a>Back to Dogs</a></Link>
+                <Link href="/dogs"><a id="backLink">Back to Dogs</a></Link>
                 <div className="profile-top">
                     <h1>Adopt Me!</h1>
-                    <img className="dog-img" alt={"photo of a " + "dog.color" + " " + dogState.breed + " named " + dogState.name}/>
+                    <img src={dogState.image} alt={"photo of a " + "dogState.color" + " " + dogState.breed + " named " + dogState.name}/>
                     <h2>{dogState.name}</h2>
                 </div>
 
-              <h2>About Me:</h2>
-               <p>{dogState.description}</p>
+                <h2 className="sectionTag">About Me:</h2>
+                <p>{dogState.description}</p>
 
-                 <h2>Additional Details:</h2>
+                <h2 className="sectionTag">Additional Details:</h2>
 
                  <div className="row">
                 <div className="col-sm-6">
