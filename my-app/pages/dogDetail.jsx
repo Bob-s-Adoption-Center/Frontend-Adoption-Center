@@ -80,7 +80,6 @@ function DogDetail() {
                                 <circle cx="50" cy="50" r="40" />
                             </svg>
                             <h5 className="card-title">Pet Adoption ID:</h5>
-                            <p className="card-text">{dogState.id}</p>
                         </div>
                     </div>
                 </div>

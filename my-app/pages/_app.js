@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "./api/oauth-token";
+import '../styles/signin.css'
 import { useEffect, useState, createContext } from "react";
 
 export const AuthContext = createContext();
