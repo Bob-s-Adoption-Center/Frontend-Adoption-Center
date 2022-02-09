@@ -65,6 +65,22 @@ ul {
   margin-bottom: 2vh;
 }
 
+.navbar {
+  background-color: #D9E3DA !important;
+}
+
+a {
+  color: black !important;
+}
+
+.view-btn {
+  background-color: #D9E3DA !important;
+}
+
+button.navbar-toggler{
+  color: black !important;
+}
+
 .circular--square {
   border-radius: 50%;
 }

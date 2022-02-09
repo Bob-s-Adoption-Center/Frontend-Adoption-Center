@@ -3,14 +3,16 @@ import { Card, Row, Col, Container } from "react-bootstrap";
 import React, {useState,useEffect} from 'react';
 import Image from "react-bootstrap/Image";
 import Footer from "../components/footer";
-// import Nav from "../components/nav";
+import NavbarDogs from '../components/navbarDogs';
+import Favorite from "../components/favorite";
 
-const Dogs = ({dog}) => {
+const Dogs = () => {
         let placeholder = 'holder.js/100px180';
 
         const imagestyle = {
             maxWidth: '100%',
             maxHeight: '100%',
+            marginTop: '10px',
         };
 
         const handleImageLoad = (event) => {
@@ -47,15 +49,19 @@ const Dogs = ({dog}) => {
                 <div style={{ 
                     backgroundColor: '#FEFEE3',
                  }}>
-                     {/* <Nav /> */}
-                    <Container style={{ 
-                                    flexWrap: 'wrap',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                }}>
+                    <NavbarDogs />
+                    <Container 
+                        style={{ 
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            marginTop: '20px',
+                            paddingTop: '40px'
+                        }}>
                         <Row>
                             {dogState.map((dog) => (
-                            <Col key={dog.id} dog={dog} xs={12} md={4} lg={3}>
+                            <Col className="container-fluid" key={dog.id} dog={dog} xs={12} md={4} lg={3}>
                                 <Card style={{ 
                                     width: '18rem', 
                                     height: '25rem',
@@ -63,7 +69,7 @@ const Dogs = ({dog}) => {
                                     boxShadow: '1px 2px 5px black',
                                     }}>
                                     <Card.Header style={{ 
-                                        height: '12rem',
+                                        height: '15rem',
                                         textAlign: 'center',
                                         backgroundColor: '#D9E3DA',
                                     }}>
@@ -75,6 +81,7 @@ const Dogs = ({dog}) => {
                                             roundedCircle/>
                                     </Card.Header>
                                     <Card.Body>
+                                        {/* <Favorite /> */}
                                         <Card.Title as="h2">{dog.name}</Card.Title>
                                         <Card.Text style={{
                                         }}>
