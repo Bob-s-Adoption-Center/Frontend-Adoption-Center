@@ -1,15 +1,25 @@
 html,
 body {
-  padding: 0;
+  padding-top: 20%vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
+.body {
+  padding-top: 3vh;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  padding-bottom: 5vh;
+  margin: auto;
+  background-color: #fefee3;
+  /* background-color: #f0ead2; */
+}
+
+/* a {
   color: inherit;
   text-decoration: none;
-}
+} */
 
 #backLink {
   text-decoration: none;
@@ -22,21 +32,81 @@ ul {
 }
 
 .profile-top {
-  padding-top: 20%vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /* background-color: #588157; */
+}
+
+.profile-top h1 {
+  padding-top: 2vh;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 4vh;
+  color: #2c6e49;
 }
 
 .profile-top h2 {
-  padding-top: 50%vh;
+  padding-top: 1vh;
+  padding-bottom: 3vh;
+  color: #4c956c;
+  font-weight: bold;
 }
 
-.profile-top * {
+* {
   box-sizing: border-box;
 }
 
+#profile-img {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  margin-bottom: 2vh;
+}
+
+.circular--square {
+  border-radius: 50%;
+}
+
+.circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+}
+
+.circular--portrait {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--portrait img {
+  width: 100%;
+  height: auto;
+}
+
+.col-sm-6 {
+  padding-bottom: 2vh;
+}
+
 .sectionTag {
-  padding: 50%vw;
+  color: #073b3a;
+}
+p {
+  color: #073b3a;
+}
+p span {
+  color: #073b3a;
 }
