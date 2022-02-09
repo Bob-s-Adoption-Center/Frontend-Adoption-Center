@@ -45,11 +45,13 @@ function DogDetail() {
         dogState
         ?
 
+
             <div className="body">
                 <section className="hero is-primary">
-                    <Link href="/dogList"><a id="backLink">Back to Dogs</a></Link>
+                    <Link href="/Dogs"><a id="backLink">Back to Dogs</a></Link>
                     <div className="profile-top">
                         <h1 className="pageHeading">Adopt Me! {dogState.status}</h1>
+
 
                         <div className="dog-img">
                             <img 

@@ -20,12 +20,13 @@ function DogList() {
         }, []);
 
     return (
-
         <div>
             {allDogState.map((dog) => {
                 return <Dog key={dog.id} dog={dog}/>
             })}
         </div>
+
+
     );
 }
 

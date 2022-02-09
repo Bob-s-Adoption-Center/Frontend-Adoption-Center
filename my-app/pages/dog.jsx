@@ -6,10 +6,9 @@ const Dog = ({dog}) => {
 
     return (
         <div className="container">
-            <div className="row">
-                <div className="card"> <style jsx>{`
+            <style jsx>{`
                 .container {
-                flex-direction: row;
+                    flex-direction: row;
                 }
                 .card {
                     width: 18rem;
@@ -18,9 +17,24 @@ const Dog = ({dog}) => {
                     align-items: center;
                     justify-content: center;
                     margin: 20px;
-                
                 }
             `}</style>
+            <div className="row">
+                <div className="card"> 
+                <div className="card col-sm"> <style jsx>{`
+                    .container {
+                        display: flex;
+                        flex-direction: grid;
+                    }
+                    .card {
+                        width: 18rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 15px;
+                        border: 2px solid black;
+                    }
+                    `}</style>
                     {/* <div>
                     <label for="favorite" class="custom-checkbox">
                         <input type="checkbox" id="favorite"/>
@@ -41,6 +55,7 @@ const Dog = ({dog}) => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
