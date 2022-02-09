@@ -1,5 +1,8 @@
 import React, {useState,useEffect} from 'react';
+import Footer from '../components/footer';
+import NavbarDogs from '../components/navbarDogs';
 import Dog from "./dog";
+
 
 function DogList() {
         //run BACKEND SERVER
@@ -20,14 +23,19 @@ function DogList() {
         }, []);
 
     return (
+        <> 
+        <NavbarDogs />
         <div>
             {allDogState.map((dog) => {
                 return <Dog key={dog.id} dog={dog}/>
             })}
         </div>
 
+        <Footer />
 
+        </>
     );
+
 }
 
 export default DogList;
