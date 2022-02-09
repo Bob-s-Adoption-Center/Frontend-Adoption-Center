@@ -4,8 +4,10 @@ import Head from 'next/head'
 const signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleSignIn = () => {
+  const handleSignIn = (e) => {
+    e.preventDefault();
     fetch("http://localhost:3001/signin", {
       method: "post",
       headers: { "Content-Type": "application/json" },
@@ -14,8 +16,10 @@ const signin = () => {
         password: password,
       }),
     });
-    console.log("success");
+    setMessage(`Success! Welcome Back ${email}!`)
   };
+
+
 
   return (
     <main className="signInLayout">
@@ -66,6 +70,7 @@ const signin = () => {
           </button>
           <p className="mt-5 mb-3" style={{textAlign: "center"}}>&copy; 2017–2022</p>
         </form>
+        <p>{message}</p>
     </div>
     </main>
   );
