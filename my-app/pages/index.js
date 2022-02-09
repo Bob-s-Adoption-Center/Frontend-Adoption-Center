@@ -1,7 +1,5 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Image from "next/image";
-import App from "./_app";
+import "../styles/Home.module.css";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 
