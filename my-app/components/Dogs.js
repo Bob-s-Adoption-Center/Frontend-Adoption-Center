@@ -1,6 +1,6 @@
 import {useRouter} from 'next/router'
 
-const dogs = () => {
+const puppies = () => {
 
 const router = useRouter();
 const dogId = router.query.dogId;

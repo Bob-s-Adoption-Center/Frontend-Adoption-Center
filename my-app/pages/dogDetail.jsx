@@ -44,9 +44,8 @@ function DogDetail() {
     return (
         dogState
         ?
-
             <div>
-                <Link href="/dogs"><a id="backLink">Back to Dogs</a></Link>
+                <Link href="/Dogs"><a id="backLink">Back to Dogs</a></Link>
                 <div className="profile-top">
                     <h1>Adopt Me!</h1>
 
