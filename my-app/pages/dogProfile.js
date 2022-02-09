@@ -13,7 +13,7 @@
 
 const profile = ({dogs}) =>{
     return (
-<div class="container-fluid">
+<div className="container-fluid">
     <header>
         <nav>
             <ul>
