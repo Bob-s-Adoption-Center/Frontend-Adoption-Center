@@ -33,6 +33,11 @@ ul {
   padding-top: 50%vh;
 }
 
+.view-btn {
+  background: #D9E3DA !important; 
+  border-color: #D9E3DA !important;
+}
+
 
 * {
   box-sizing: border-box;
