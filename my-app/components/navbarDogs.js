@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 // import styles from "../styles/Home.module.css";
 
-class Navbar extends Component {
+class NavbarDogs extends Component {
   render() {
     return (
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -29,31 +29,19 @@ class Navbar extends Component {
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Dogs
+                  Contact
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Contact
+                  About
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
-              Login
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Logout
-            </a>
-          </li>
-        </ul>
       </nav>
     );
   }
 }
-export default Navbar;
+export default NavbarDogs;

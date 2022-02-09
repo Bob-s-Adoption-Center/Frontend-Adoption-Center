@@ -29,21 +29,14 @@ ul {
   flex-direction: column;
 }
 
-<<<<<<< HEAD
-.profile-top * {
-=======
 .profile-top h2 {
   padding-top: 50%vh;
 }
 
-.profile-top 
-
-* {
->>>>>>> 64f6223ef5a29e17146ff596c0388250e4144a87
+.profile-top * {
   box-sizing: border-box;
 }
 
 .sectionTag {
   padding: 50%vw;
 }
-
