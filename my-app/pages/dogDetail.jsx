@@ -49,11 +49,11 @@ function DogDetail() {
 
 
             <div className="body">
+
                 <section className="hero is-primary">
                     <Link href="/Dogs"><a id="backLink">Back to Dogs</a></Link>
                     <div className="profile-top">
-                        <h1 className="pageHeading">{dogState.status}</h1>
-
+                        <h1 className="status">{dogState.status}</h1>
 
                         <div className="dog-img">
                             <img 
@@ -64,20 +64,20 @@ function DogDetail() {
                             />
                         </div>
 
-                        <h2>{dogState.name}</h2>
+                        <h2 class="name">{dogState.name}</h2>
                     </div>
                 </section>
                 {/* <h2 className="sectionTag">Availability:</h2>
                 <p>{dogState.status}</p> */}
                 <div className="d-grid gap-2">
-                    <Button variant="success" size="lg">
+                    <Button  id="adoptBtn" variant="success" size="lg">
                         Click to Adopt Me!
                     </Button>
                 </div>
                 <hr></hr>
 
                 <h2 className="sectionTag">About Me:</h2>
-                <p>{dogState.description} <span>You can find me located at: {dogState.location}.</span></p>
+                <p class="description">{dogState.description} <span>You can find me located at: {dogState.location}.</span></p>
 
                 <h2 className="sectionTag">Additional Details:</h2>
 
