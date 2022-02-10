@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
+import Footer from '../components/footer';
+import Navbar from '../components/navbar';
 
 
 function DogDetail() {
@@ -46,8 +48,8 @@ function DogDetail() {
     return (
         dogState
         ?
-
-
+            <>
+            <Navbar/>
             <div className="body">
                 <section className="hero is-primary">
                     <Link href="/Dogs"><a id="backLink">Back to Dogs</a></Link>
@@ -70,7 +72,8 @@ function DogDetail() {
                 {/* <h2 className="sectionTag">Availability:</h2>
                 <p>{dogState.status}</p> */}
                 <div className="d-grid gap-2">
-                    <Button variant="success" size="lg">
+
+                    <Button href="/adoptForm" variant="success" size="lg">
                         Click to Adopt Me!
                     </Button>
                 </div>
@@ -182,6 +185,8 @@ function DogDetail() {
                 </div> 
 
             </div>
+            <Footer/>
+            </>
         :
         <p>woof! woof! loading...</p>
        

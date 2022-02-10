@@ -23,7 +23,7 @@ export default function Home() {
               another animal in need to find lasting love through the wonder of
               adoption.
             </p>
-            <a className="btn btn-outline-secondary" href="/dogList">
+            <a className="btn btn-outline-secondary" href="/Dogs">
               Look through our pets!
             </a>
           </div>
