@@ -28,12 +28,16 @@ class Navbar extends Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/Dogs">
                   Dogs
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a
+                  class="nav-link"
+                  href="https://www.verizon.com/about/news/learn-grow-thrive"
+                  target="_blank"
+                >
                   About us
                 </a>
               </li>
