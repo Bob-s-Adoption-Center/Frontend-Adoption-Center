@@ -48,7 +48,7 @@ class Footer extends Component {
           />
           <FaTwitter
             className="fa-2x"
-            style={{ fontSize: "3em", color: "90e0ef", marginLeft: "0.5em" }}
+            style={{ fontSize: "3em", color: "ade8f4", marginLeft: "0.5em" }}
           />
         </ul>
       </footer>
