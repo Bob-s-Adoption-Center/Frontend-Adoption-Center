@@ -80,8 +80,7 @@ a {
 }
 
 a:hover {
-  background-color: pink;
-  border-radius: 20%;
+  opacity: 0.75;
 }
 
 #adoptBtn {

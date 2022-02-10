@@ -28,7 +28,11 @@ class Navbar extends Component {
                 </a>
               </li>
               <li className="nav-item">
+<<<<<<< HEAD
+                <a className="nav-link" style={{fontAlign: 'right'}} href="/Dogs">
+=======
                 <a className="nav-link" href="/Dogs">
+>>>>>>> e1ff1c5a772d212a83cafb2c21c295f2abcebf81
                   Dogs
                 </a>
               </li>

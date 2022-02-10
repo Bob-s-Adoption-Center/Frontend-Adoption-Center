@@ -24,11 +24,15 @@ export default function Home({ message }) {
               another animal in need to find lasting love through the wonder of
               adoption.
             </p>
+<<<<<<< HEAD
+            <a className="btn btn-outline-secondary" style={{color: 'black', border: "solid black 2px"}} href="/Dogs">
+=======
             <a
               className="btn btn-outline-secondary"
               style={{ color: "black", border: "solid black 2px" }}
               href="/Dogs"
             >
+>>>>>>> e1ff1c5a772d212a83cafb2c21c295f2abcebf81
               Look through our pets!
             </a>
           </div>
