@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from "react";
-// import styles from "../styles/Home.module.css";
 
 class NavbarDogs extends Component {
   render() {
@@ -18,22 +17,22 @@ class NavbarDogs extends Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">
+          <div className="collapse navbar-collapse" id="navbarCollapse">
+            <ul className="navbar-nav me-auto mb-2 mb-md-0">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="/">
                   Home
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <a className="nav-link active" href="#">
                   Contact
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <a className="nav-link active" href="#">
                   About
                 </a>
               </li>
