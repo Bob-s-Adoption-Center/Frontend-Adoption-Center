@@ -17,6 +17,7 @@ const Dogs = () => {
             marginTop: '10px',
             width: '200px',
             height: '200px',
+            border: '4px solid whitesmoke',
         };
 
         const favstyle = {
