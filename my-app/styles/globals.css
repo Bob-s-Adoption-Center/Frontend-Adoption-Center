@@ -80,8 +80,7 @@ a {
 }
 
 a:hover {
-  background-color: pink;
-  border-radius: 20%;
+  opacity: 0.75;
 }
 
 #adoptBtn {
@@ -201,4 +200,16 @@ p span {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
+}
+
+.adoptForm {
+  margin: 25px;
+  padding: 16px;
+}
+
+.formSection {
+  border: solid rgb(217, 224, 233) 1px;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 15px;
 }
