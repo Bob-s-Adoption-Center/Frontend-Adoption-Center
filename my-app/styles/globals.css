@@ -14,7 +14,7 @@ body {
   margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background: repeating-linear-gradient(rgb(217, 227, 218), rgb(217, 227, 218) 28vh, rgb(254, 254, 227) 10.5vh, rgb(254, 254, 227) 100vh);
+  background: linear-gradient(rgb(217, 227, 218), rgb(217, 227, 218) 28vh, rgb(254, 254, 227) 10.5vh, rgb(254, 254, 227) 100vh );
   /* background-color: rgb(254, 254, 227); */
   /* background-color: #fefee3; */
   /* background-color: #f0ead2; */
@@ -53,7 +53,7 @@ ul {
   font-weight: bold;
   margin-bottom: 4vh;
   /* color: rgb(217, 227, 218) */
-  color: #2c6e49;
+  color: #F7EDE2;
 }
 
 * {
@@ -83,8 +83,13 @@ a:hover {
   border-radius: 20%;
 }
 
+#adoptBtn {
+  background-color: #F28482;
+}
+
 .view-btn {
   background-color: #D9E3DA !important;
+  color: #F7EDE2;
 }
 
 button.navbar-toggler{
@@ -93,6 +98,7 @@ button.navbar-toggler{
 
 .description {
   text-align: justify;
+  color: #84A59D;
 }
 
 .circular--square {
@@ -138,6 +144,10 @@ p {
   color: #073b3a;
 }
 p span {
+  color: #073b3a;
+}
+
+#name {
   color: #073b3a;
 }
 

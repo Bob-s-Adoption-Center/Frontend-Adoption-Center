@@ -54,7 +54,6 @@ function DogDetail() {
                     <div className="profile-top">
                         <h1 className="status">{dogState.status}</h1>
 
-
                         <div className="dog-img">
                             <img 
                                 id="profile-img"
@@ -64,13 +63,13 @@ function DogDetail() {
                             />
                         </div>
 
-                        <h2>{dogState.name}</h2>
+                        <h2 class="name">{dogState.name}</h2>
                     </div>
                 </section>
                 {/* <h2 className="sectionTag">Availability:</h2>
                 <p>{dogState.status}</p> */}
                 <div className="d-grid gap-2">
-                    <Button variant="success" size="lg">
+                    <Button  id="adoptBtn" variant="success" size="lg">
                         Click to Adopt Me!
                     </Button>
                 </div>
