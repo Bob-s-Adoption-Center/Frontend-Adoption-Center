@@ -32,19 +32,17 @@ class Navbar extends Component {
                   Dogs
                 </a>
               </li>
-<<<<<<< HEAD
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   About us
-=======
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Contact
->>>>>>> 190fe5f1e9b886baacb638c17dfb0d7a5780fadd
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/signin">
+                <a
+                  className="nav-link active"
+                  aria-current="page"
+                  href="/signin"
+                >
                   Login
                 </a>
               </li>
