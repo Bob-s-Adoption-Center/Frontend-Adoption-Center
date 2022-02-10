@@ -34,7 +34,7 @@ class Navbar extends Component {
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Contact
+                  About us
                 </a>
               </li>
             </ul>
