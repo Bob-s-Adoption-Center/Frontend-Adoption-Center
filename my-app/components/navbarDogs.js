@@ -1,12 +1,11 @@
 import React, { Component, Fragment } from "react";
-// import styles from "../styles/Home.module.css";
 
 class NavbarDogs extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             Bob's Adoption Center
           </a>
           <button
@@ -23,17 +22,17 @@ class NavbarDogs extends Component {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav me-auto mb-2 mb-md-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link active" aria-current="page" href="/">
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link active" href="#">
                   Contact
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link active" href="#">
                   About
                 </a>
               </li>
