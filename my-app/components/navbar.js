@@ -32,9 +32,9 @@ class Navbar extends Component {
                   Dogs
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Contact
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  About us
                 </a>
               </li>
             </ul>
