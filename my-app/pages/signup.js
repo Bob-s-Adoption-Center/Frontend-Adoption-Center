@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Footer from '../components/footer';
-import Navbar from "../components/navbarDogs";
+import Navbar from "../components/navbar";
 
 const signup = () => {
   const [email, setEmail] = useState("");
@@ -9,6 +9,7 @@ const signup = () => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
+    window.location.href = "/signin";
     const response = await fetch("http://localhost:3001/signup", {
       method: "post",
       headers: { "Content-Type": "application/json" },
@@ -19,7 +20,6 @@ const signup = () => {
     });
     setMessage(`Success! Welcome ${email}!`)
     const data = await response.json();
-    console.log(data);
   };
 
 
@@ -72,6 +72,7 @@ const signup = () => {
             Sign up
           </button>
         </form>
+        <br></br>
        <p style={{textAlign: "center"}}>{message}</p>
        <Footer />
     </div>

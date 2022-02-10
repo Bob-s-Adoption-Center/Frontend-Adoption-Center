@@ -2,8 +2,9 @@ import Head from "next/head";
 import "../styles/Home.module.css";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
+import { useContext } from "react";
 
-export default function Home() {
+export default function Home({message}) {
   return (
     <div>
       <nav>
