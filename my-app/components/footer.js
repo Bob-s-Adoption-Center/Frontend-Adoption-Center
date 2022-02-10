@@ -40,11 +40,11 @@ class Footer extends Component {
           />
           <FaLinkedin
             className="fa-2x"
-            style={{ fontSize: "3em", color: "0077b6",marginLeft: "0.5em" }}
+            style={{ fontSize: "3em", color: "0077b6", marginLeft: "0.5em" }}
           />
           <FcGoogle
             className="fa-2x"
-            style={{ fontSize: "3em", color: "90e0ef",marginLeft: "0.5em" }}
+            style={{ fontSize: "3em", color: "90e0ef", marginLeft: "0.5em" }}
           />
           <FaTwitter
             className="fa-2x"
@@ -55,5 +55,4 @@ class Footer extends Component {
     );
   }
 }
-
 export default Footer;
