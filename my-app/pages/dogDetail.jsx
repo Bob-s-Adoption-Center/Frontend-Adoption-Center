@@ -49,6 +49,7 @@ function DogDetail() {
 
 
             <div className="body">
+
                 <section className="hero is-primary">
                     <Link href="/Dogs"><a id="backLink">Back to Dogs</a></Link>
                     <div className="profile-top">
