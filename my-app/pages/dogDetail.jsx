@@ -52,7 +52,7 @@ function DogDetail() {
                 <section className="hero is-primary">
                     <Link href="/Dogs"><a id="backLink">Back to Dogs</a></Link>
                     <div className="profile-top">
-                        <h1 className="pageHeading">{dogState.status}</h1>
+                        <h1 className="status">{dogState.status}</h1>
 
 
                         <div className="dog-img">
@@ -77,7 +77,7 @@ function DogDetail() {
                 <hr></hr>
 
                 <h2 className="sectionTag">About Me:</h2>
-                <p>{dogState.description} <span>You can find me located at: {dogState.location}.</span></p>
+                <p class="description">{dogState.description} <span>You can find me located at: {dogState.location}.</span></p>
 
                 <h2 className="sectionTag">Additional Details:</h2>
 

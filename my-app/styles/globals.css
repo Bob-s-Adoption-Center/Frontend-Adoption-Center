@@ -12,17 +12,25 @@ body {
   padding-right: 15vw;
   padding-bottom: 5vh;
   margin: auto;
-  background-color: #fefee3;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: repeating-linear-gradient(rgb(217, 227, 218), rgb(217, 227, 218) 28vh, rgb(254, 254, 227) 10.5vh, rgb(254, 254, 227) 100vh);
+  /* background-color: rgb(254, 254, 227); */
+  /* background-color: #fefee3; */
   /* background-color: #f0ead2; */
 }
 
-/* a {
+a {
   color: inherit;
   text-decoration: none;
-} */
+  font-family: bely-display, sans-serif;
+}
 
 #backLink {
   text-decoration: none;
+}
+#backlink:hover {
+  text-decoration: underline;
 }
 
 ul {
@@ -44,6 +52,7 @@ ul {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 4vh;
+  /* color: rgb(217, 227, 218) */
   color: #2c6e49;
 }
 
@@ -56,7 +65,9 @@ ul {
   height: 175px;
   border-radius: 50%;
   margin-bottom: 2vh;
-  border: 5px solid whitesmoke;
+  border: 4px solid whitesmoke;
+  outline: 15px solid rgb(217, 227, 218); 
+  /* border: 5px solid whitesmoke; */
 }
 
 .navbar {
@@ -67,12 +78,21 @@ a {
   color: black !important;
 }
 
+a:hover {
+  background-color: pink;
+  border-radius: 20%;
+}
+
 .view-btn {
   background-color: #D9E3DA !important;
 }
 
 button.navbar-toggler{
   color: black !important;
+}
+
+.description {
+  text-align: justify;
 }
 
 .circular--square {
