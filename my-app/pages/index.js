@@ -2,8 +2,9 @@ import Head from "next/head";
 import "../styles/Home.module.css";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
+import { useContext } from "react";
 
-export default function Home() {
+export default function Home({ message }) {
   return (
     <div>
       <nav>
@@ -23,7 +24,11 @@ export default function Home() {
               another animal in need to find lasting love through the wonder of
               adoption.
             </p>
-            <a className="btn btn-outline-secondary" href="/Dogs">
+            <a
+              className="btn btn-outline-secondary"
+              style={{ color: "black", border: "solid black 2px" }}
+              href="/Dogs"
+            >
               Look through our pets!
             </a>
           </div>
@@ -43,7 +48,11 @@ export default function Home() {
                 animal to be paired with a loving forever family. Change the
                 life of an animal with a little extra TLC today.
               </p>
-              <a className="btn btn-outline-secondary" href="#">
+              <a
+                className="btn btn-outline-secondary"
+                href="https://spca.org/adopt/foster/be-a-foster-hero/"
+                target="_blank"
+              >
                 Get Started
               </a>
             </div>
@@ -57,36 +66,31 @@ export default function Home() {
                 working directly with animals, working behind the scenes or
                 helping out at our next special event..
               </p>
-              <a className="btn btn-outline-secondary" href="#">
+              <a
+                className="btn btn-outline-secondary"
+                href="https://spca.org/support-us/volunteer/ways-to-volunteer/"
+                target="_blank"
+              >
                 Learn More
               </a>
             </div>
             <div className="bg-dark shadow-sm mx-auto"></div>
           </div>
-          <div className="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div className="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
             <div className="my-3 p-3">
               <h2 className="display-5">FIGHT ANIMAL CRUELTY</h2>
-              <p className="lead">
+              <p className="lead" style={{ color: "white" }}>
                 Our Animal Cruelty Investigations Unit helped more than 1,400
                 animals last year. If you see an animal suffering in your
                 neighborhood, speak up and help put a stop to cruelty and
                 neglect.
               </p>
-              <a className="btn btn-outline-secondary" href="#">
+              <a
+                className="btn btn-outline-secondary"
+                href="https://spca.org/resources/help-animals/report-abuse/animal-cruelty-complaint/"
+                target="_blank"
+              >
                 Report Abuse
-              </a>
-            </div>
-            <div className="bg-dark shadow-sm mx-auto"></div>
-          </div>
-          <div className="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div className="my-3 py-3">
-              <h2 className="display-5">CARE & TIPS</h2>
-              <p className="lead" style={{ color: "white" }}>
-                You love your pet. Now learn all the best ways to care for him,
-                from training tips to health and safety guidelines.
-              </p>
-              <a className="btn btn-outline-secondary" href="#">
-                GET HELP
               </a>
             </div>
             <div className="bg-light shadow-sm mx-auto"></div>
@@ -94,49 +98,52 @@ export default function Home() {
         </div>
 
         {/* trying another div here */}
-        <h1>
+        <h3>
           <p style={{ textAlign: "center", color: "purple" }}>
-            Your Pet Adoption Journey
+            YOUR PET ADOPTION JOURNEY
           </p>
-        </h1>
-        <div className="content-region__container content-region__container--center">
-          <ul className="text-image-grid  text-image-grid--center">
-            <li>
+        </h3>
+        <div className="container clearfix">
+          <ul className="row">
+            <li className="col-auto">
               <img
+                className="card-img-top"
                 src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-search.png"
                 alt=""
                 width="500"
                 height="365"
               ></img>
-              <h6>Search</h6>
+              <h3>Search</h3>
               <p>
                 It's easy to find a dog who's right for you at a shelter or
                 rescue group. Simply enter your zip code above to start your{" "}
                 <a href="/pet-search/">search</a>.
               </p>
             </li>
-            <li>
+            <li className="col-auto">
               <img
+                className="card-img-top"
                 src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-hearts.png"
                 alt=""
                 width="500"
                 height="365"
               ></img>
-              <h6>Meet</h6>
+              <h3>Meet</h3>
               <p>
                 Once you find a pet, click "learn more about me" to get contact
                 info for their shelter or rescue. Contact them to learn more
                 about how to meet and adopt the pet.
               </p>
             </li>
-            <li>
+            <li className="col-auto">
               <img
+                className="card-img-top"
                 src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-house.png"
                 alt=""
                 width="500"
                 height="365"
               ></img>
-              <h6>Adopt</h6>
+              <h3>Adopt</h3>
               <p>
                 The rescue or shelter will walk you through their adoption
                 process. Prepare your home for the arrival of your dog to help
@@ -158,7 +165,7 @@ export default function Home() {
                 class="item-title"
                 style={{ textAlign: "center", color: "purple" }}
               >
-                Clinics
+                <b>Clinics</b>
               </h4>
               <p>
                 Your best animal friend deserves the best care, and we are
@@ -167,6 +174,7 @@ export default function Home() {
               <a
                 class="text-link"
                 href="https://www.spca.org/resources/clinic/clinic-services/"
+                target="_blank"
               >
                 See Locations and Services
               </a>
@@ -179,7 +187,7 @@ export default function Home() {
                 class="item-title"
                 style={{ textAlign: "center", color: "orange" }}
               >
-                Online Pharmacy
+                <b>Online Pharmacy</b>
               </h4>{" "}
               <p>
                 Order medicine, food and even treats online, and they’ll be
@@ -188,6 +196,7 @@ export default function Home() {
               <a
                 class="text-link"
                 href="https://spcaoftexas3.securevetsource.com/site/view/182142_HomeDelivery.pml"
+                target="_blank"
               >
                 Browse and Shop
               </a>
@@ -200,7 +209,7 @@ export default function Home() {
                 class="item-title"
                 style={{ textAlign: "center", color: "red" }}
               >
-                Care &amp; Tips
+                <b>Care &amp; Tips</b>
               </h4>{" "}
               <p>
                 You love your pet. Now learn all the best ways to care for him,
@@ -209,6 +218,7 @@ export default function Home() {
               <a
                 class="text-link"
                 href="https://www.spca.org/resources/pet-needs/pet-tips-training/"
+                target="_blank"
               >
                 Get Expert Help for Your Animal
               </a>
@@ -221,7 +231,7 @@ export default function Home() {
                 class="item-title"
                 style={{ textAlign: "center", color: "indigo" }}
               >
-                Lost &amp; Found
+                <b>Lost &amp; Found</b>
               </h4>{" "}
               <p>
                 Check our found pet listings and connect to other shelters so
@@ -230,6 +240,7 @@ export default function Home() {
               <a
                 class="text-link"
                 href="https://www.spca.org/resources/pet-needs/lost-found/"
+                target="_blank"
               >
                 Get Fast Help for a Lost Animal
               </a>
@@ -243,7 +254,7 @@ export default function Home() {
                 class="item-title"
                 style={{ textAlign: "center", color: "green" }}
               >
-                Get Help to Keep Your Pet
+                <b>Get Help to Keep Your Pet</b>
               </h4>{" "}
               <p>
                 Struggling to provide medical care or food for your pet? We may
@@ -252,6 +263,7 @@ export default function Home() {
               <a
                 class="text-link"
                 href="https://www.spca.org/resources/pet-needs/support-to-keep-your-pet/"
+                target="_blank"
               >
                 Learn How We Can Help
               </a>
@@ -265,7 +277,7 @@ export default function Home() {
                 class="item-title"
                 style={{ textAlign: "center", color: "blue" }}
               >
-                Animal Surrender
+                <b>Animal Surrender</b>
               </h4>{" "}
               <p>
                 Giving up a pet isn’t easy. If you’re wondering what your
@@ -274,6 +286,7 @@ export default function Home() {
               <a
                 class="text-link"
                 href="https://www.spca.org/resources/pet-needs/rehome/"
+                target="_blank"
               >
                 Rehoming Options
               </a>

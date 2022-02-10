@@ -1,15 +1,19 @@
-import { useState } from "react";
+import { useState, useContext, createContext } from "react";
 import Footer from '../components/footer';
-import Navbar from "../components/navbarDogs";
+import Navbar from "../components/navbar";
 import Head from 'next/head'
 
+const UserSignIn = createContext();
+
 const signin = () => {
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSignIn = (e) => {
     e.preventDefault();
+    window.location.href = "/";
     fetch("http://localhost:3001/signin", {
       method: "post",
       headers: { "Content-Type": "application/json" },
@@ -20,8 +24,6 @@ const signin = () => {
     });
     setMessage(`Success! Welcome Back ${email}!`)
   };
-
-
 
   return (
     <main className="signInLayout">
@@ -73,7 +75,9 @@ const signin = () => {
           </button>
         </form>
         <br></br>
+        <UserSignIn.Provider value={message}>
         <p>{message}</p>
+        </UserSignIn.Provider>
         <Footer />
     </div>
     </main>
