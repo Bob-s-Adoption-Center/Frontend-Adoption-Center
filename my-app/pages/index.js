@@ -2,8 +2,9 @@ import Head from "next/head";
 import "../styles/Home.module.css";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
+import { useContext } from "react";
 
-export default function Home() {
+export default function Home({message}) {
   return (
     <div>
       <nav>
@@ -23,7 +24,7 @@ export default function Home() {
               another animal in need to find lasting love through the wonder of
               adoption.
             </p>
-            <a className="btn btn-outline-secondary" href="/dogList">
+            <a className="btn btn-outline-secondary" style={{color: 'black', border: "solid black 2px"}} href="/dogList">
               Look through our pets!
             </a>
           </div>
@@ -93,49 +94,52 @@ export default function Home() {
         </div>
 
         {/* trying another div here */}
-        <h1>
+        <h3>
           <p style={{ textAlign: "center", color: "purple" }}>
             YOUR PET ADOPTION JOURNEY
           </p>
-        </h1>
-        <div className="content-region__container content-region__container--center">
-          <ul className="text-image-grid  text-image-grid--center">
-            <li>
+        </h3>
+        <div className="container clearfix">
+          <ul className="row">
+            <li className="col-auto">
               <img
+                className="card-img-top"
                 src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-search.png"
                 alt=""
                 width="500"
                 height="365"
               ></img>
-              <h6>Search</h6>
+              <h3>Search</h3>
               <p>
                 It's easy to find a dog who's right for you at a shelter or
                 rescue group. Simply enter your zip code above to start your{" "}
                 <a href="/pet-search/">search</a>.
               </p>
             </li>
-            <li>
+            <li className="col-auto">
               <img
+                className="card-img-top"
                 src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-hearts.png"
                 alt=""
                 width="500"
                 height="365"
               ></img>
-              <h6>Meet</h6>
+              <h3>Meet</h3>
               <p>
                 Once you find a pet, click "learn more about me" to get contact
                 info for their shelter or rescue. Contact them to learn more
                 about how to meet and adopt the pet.
               </p>
             </li>
-            <li>
+            <li className="col-auto">
               <img
+                className="card-img-top"
                 src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-house.png"
                 alt=""
                 width="500"
                 height="365"
               ></img>
-              <h6>Adopt</h6>
+              <h3>Adopt</h3>
               <p>
                 The rescue or shelter will walk you through their adoption
                 process. Prepare your home for the arrival of your dog to help

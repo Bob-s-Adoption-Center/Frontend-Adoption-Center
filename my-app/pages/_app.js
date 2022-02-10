@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "./api/oauth-token";
 import { useEffect, useState, createContext } from "react";
-
+import { signIn } from './signin'
 export const AuthContext = createContext();
 
 function MyApp({ Component, pageProps }) {
@@ -20,7 +20,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <AuthContext.Provider value={accessToken}>
+      <signIn>
       <Component {...pageProps} />
+      </signIn>
     </AuthContext.Provider>
   );
 }

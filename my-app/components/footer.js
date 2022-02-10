@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
-import Social from "./socialmedia";
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 class Footer extends Component {
   render() {
     return (
@@ -34,7 +35,24 @@ class Footer extends Component {
         </ul>
         <Social />
         <p className="text-center">© 2022 Company, Inc</p>
-        <Social />
+        <ul className="nav justify-content-center">
+          <FaFacebook
+            className="fa-2x"
+            style={{ fontSize: "3em", color: "blue" }}
+          />
+          <FaLinkedin
+            className="fa-2x"
+            style={{ fontSize: "3em", color: "0077b6", marginLeft: "0.5em" }}
+          />
+          <FcGoogle
+            className="fa-2x"
+            style={{ fontSize: "3em", color: "90e0ef", marginLeft: "0.5em" }}
+          />
+          <FaTwitter
+            className="fa-2x"
+            style={{ fontSize: "3em", color: "90e0ef", marginLeft: "0.5em" }}
+          />
+        </ul>
       </footer>
     );
   }
