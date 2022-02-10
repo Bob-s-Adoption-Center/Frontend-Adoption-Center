@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Footer from '../components/footer';
+import Navbar from "../components/navbarDogs";
 
 const signup = () => {
   const [email, setEmail] = useState("");
@@ -23,6 +25,7 @@ const signup = () => {
 
   return (
     <main className="signInLayout">
+      <Navbar />
     <div className="form-signin">
           <img className="signInImage" src="./img/dog-banner.png" alt="10 dogs sitting alongside side each other serving as the sign in page banner" width="275" height="75"></img>
         <form action="/signup" method="post">
@@ -68,9 +71,9 @@ const signup = () => {
           >
             Sign up
           </button>
-          <p className="mt-5 mb-3" style={{textAlign: "center"}}>&copy; 2017–2022</p>
         </form>
        <p style={{textAlign: "center"}}>{message}</p>
+       <Footer />
     </div>
     </main>
   );
