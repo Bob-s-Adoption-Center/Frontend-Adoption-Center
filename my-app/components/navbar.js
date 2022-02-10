@@ -4,13 +4,13 @@ import React, { Component, Fragment } from "react";
 class Navbar extends Component {
   render() {
     return (
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+      <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
             Bob's Adoption Center
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarCollapse"
@@ -18,40 +18,44 @@ class Navbar extends Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+          <div className="collapse navbar-collapse" id="navbarCollapse">
+            <ul className="navbar-nav me-auto mb-2 mb-md-0">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">
                   Home
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <a className="nav-link" href="#">
                   Dogs
                 </a>
               </li>
+<<<<<<< HEAD
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   About us
+=======
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Contact
+>>>>>>> 190fe5f1e9b886baacb638c17dfb0d7a5780fadd
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="/signin">
+                  Login
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  Logout
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
-              Login
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Logout
-            </a>
-          </li>
-        </ul>
       </nav>
     );
   }

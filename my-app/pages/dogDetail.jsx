@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
+import Button from 'react-bootstrap/Button';
+
 
 function DogDetail() {
    
@@ -50,7 +52,7 @@ function DogDetail() {
                 <section className="hero is-primary">
                     <Link href="/Dogs"><a id="backLink">Back to Dogs</a></Link>
                     <div className="profile-top">
-                        <h1 className="pageHeading">Adopt Me! {dogState.status}</h1>
+                        <h1 className="pageHeading">{dogState.status}</h1>
 
 
                         <div className="dog-img">
@@ -67,6 +69,11 @@ function DogDetail() {
                 </section>
                 {/* <h2 className="sectionTag">Availability:</h2>
                 <p>{dogState.status}</p> */}
+                <div className="d-grid gap-2">
+                    <Button variant="success" size="lg">
+                        Click to Adopt Me!
+                    </Button>
+                </div>
                 <hr></hr>
 
                 <h2 className="sectionTag">About Me:</h2>
@@ -79,8 +86,14 @@ function DogDetail() {
                         <div className="card text-center" >
                             <div className="card-body">
                                 <svg width="100" height="100">
-                                    <circle cx="50" cy="50" r="20" />
+                                    <defs>
+                                        <clipPath id="circleView">
+                                            <circle cx="50" cy="50" r="20" />
+                                        </clipPath>
+                                    </defs>
+                                    <image xlinkHref="icons/id.jpeg" x="13" y="20" width="70" height="60" clipPath="url(#circleView)" />
                                 </svg>
+                             
                                 <h5 className="card-title">Pet Adoption ID:</h5>
                                 <p className="card-text">{dogState.id}</p>
                             </div>
@@ -90,7 +103,12 @@ function DogDetail() {
                         <div className="card text-center" >
                             <div className="card-body">
                                 <svg width="100" height="100">
-                                    <circle cx="50" cy="50" r="20" />
+                                    <defs>
+                                        <clipPath id="circleView">
+                                            <circle cx="50" cy="50" r="20" />
+                                        </clipPath>
+                                    </defs>
+                                    <image xlinkHref="icons/poodle.jpeg" x="23" y="25" width="60" height="50" clipPath="url(#circleView)" />
                                 </svg>
                                 <h5 className="card-title">Breed:</h5>
                                 <p className="card-text">{dogState.breed}</p>
@@ -101,7 +119,12 @@ function DogDetail() {
                         <div className="card text-center" >
                             <div className="card-body">
                                 <svg width="100" height="100">
-                                    <circle cx="50" cy="50" r="20" />
+                                    <defs>
+                                        <clipPath id="circleView">
+                                            <circle cx="50" cy="50" r="20" />
+                                        </clipPath>
+                                    </defs>
+                                    <image xlinkHref="icons/calendar.jpeg" x="20" y="25" width="60" height="50" clipPath="url(#circleView)" />
                                 </svg>
                                 <h5 className="card-title">Age:</h5>
                                 <p className="card-text">{dogState.age}</p>
@@ -112,7 +135,12 @@ function DogDetail() {
                         <div className="card text-center" >
                             <div className="card-body">
                                 <svg width="100" height="100">
-                                    <circle cx="50" cy="50" r="20" />
+                                    <defs>
+                                        <clipPath id="circleView">
+                                            <circle cx="50" cy="50" r="20" />
+                                        </clipPath>
+                                    </defs>
+                                    <image xlinkHref="icons/gender.jpeg" x="20" y="25" width="60" height="50" clipPath="url(#circleView)" />
                                 </svg>
                                 <h5 className="card-title">Gender:</h5>
                                 <p className="card-text">{dogState.gender}</p>
@@ -123,7 +151,12 @@ function DogDetail() {
                         <div className="card text-center" >
                             <div className="card-body">
                                 <svg width="100" height="100">
-                                    <circle cx="50" cy="50" r="20" />
+                                    <defs>
+                                        <clipPath id="circleView">
+                                            <circle cx="50" cy="50" r="20" />
+                                        </clipPath>
+                                    </defs>
+                                    <image xlinkHref="icons/weight.jpeg" x="20" y="25" width="60" height="50" clipPath="url(#circleView)" />
                                 </svg>
                                 <h5 className="card-title">Size:</h5>
                                 <p className="card-text">{dogState.size}</p>
@@ -134,7 +167,12 @@ function DogDetail() {
                         <div className="card text-center" >
                             <div className="card-body">
                                 <svg width="100" height="100">
-                                    <circle cx="50" cy="50" r="20" />
+                                    <defs>
+                                        <clipPath id="circleView">
+                                            <circle cx="50" cy="50" r="20" />
+                                        </clipPath>
+                                    </defs>
+                                    <image xlinkHref="icons/color.jpeg" x="20" y="25" width="60" height="50" clipPath="url(#circleView)" />
                                 </svg>
                                 <h5 className="card-title">Color:</h5>
                                 <p className="card-text">{dogState.color}</p>

@@ -1,11 +1,15 @@
 import { useState } from "react";
+import Footer from '../components/footer';
+import Navbar from "../components/navbarDogs";
 
 const signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleSignUp = () => {
-    fetch("http://localhost:3001/signup", {
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    const response = await fetch("http://localhost:3001/signup", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -13,14 +17,19 @@ const signup = () => {
         password: password,
       }),
     });
+    setMessage(`Success! Welcome ${email}!`)
+    const data = await response.json();
+    console.log(data);
   };
+
 
   return (
     <main className="signInLayout">
+      <Navbar />
     <div className="form-signin">
           <img className="signInImage" src="./img/dog-banner.png" alt="10 dogs sitting alongside side each other serving as the sign in page banner" width="275" height="75"></img>
         <form action="/signup" method="post">
-          <h1 className="h3 mb-3 fw-normal" style={{textAlign: "center"}}>Welcome Back! Please sign up</h1>
+          <h1 className="h3 mb-3 fw-normal" style={{textAlign: "center"}}>Welcome! Please sign up</h1>
           <div className="form-floating">
             <input
               type="email"
@@ -62,8 +71,9 @@ const signup = () => {
           >
             Sign up
           </button>
-          <p className="mt-5 mb-3" style={{textAlign: "center"}}>&copy; 2017–2022</p>
         </form>
+       <p style={{textAlign: "center"}}>{message}</p>
+       <Footer />
     </div>
     </main>
   );
