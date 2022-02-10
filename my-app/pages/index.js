@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import { useContext } from "react";
 
-export default function Home({message}) {
+export default function Home({ message }) {
   return (
     <div>
       <nav>
@@ -24,7 +24,11 @@ export default function Home({message}) {
               another animal in need to find lasting love through the wonder of
               adoption.
             </p>
-            <a className="btn btn-outline-secondary" style={{color: 'black', border: "solid black 2px"}} href="/dogList">
+            <a
+              className="btn btn-outline-secondary"
+              style={{ color: "black", border: "solid black 2px" }}
+              href="/Dogs"
+            >
               Look through our pets!
             </a>
           </div>
