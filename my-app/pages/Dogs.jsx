@@ -4,7 +4,9 @@ import React, {useState,useEffect} from 'react';
 import Image from "react-bootstrap/Image";
 import Footer from "../components/footer";
 import NavbarDogs from '../components/navbarDogs';
-import Favorite from "../components/favorite";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faHeart } from '@fortawesome/free-solid-svg-icons';
+
 
 const Dogs = () => {
         let placeholder = 'holder.js/100px180';
@@ -13,6 +15,21 @@ const Dogs = () => {
             maxWidth: '100%',
             maxHeight: '100%',
             marginTop: '10px',
+            width: '200px',
+            height: '200px',
+        };
+
+        const favstyle = {
+            position: 'absolute',
+            top: '0px',
+            right: '0px',
+        
+        };
+
+        const cardBody = {
+            display:'flex',
+            flexDirection:'column',
+            justifyContent:'space-between',
         };
 
         const handleImageLoad = (event) => {
@@ -47,31 +64,30 @@ const Dogs = () => {
 
             return (
                 <div style={{ 
-                    backgroundColor: '#FEFEE3',
+                    backgroundColor: '#FFFFFF',
                  }}>
                     <NavbarDogs />
                     <Container 
                         style={{ 
-                            display: 'flex',
                             flexWrap: 'wrap',
                             alignItems: 'center',
                             justifyContent: 'center',
                             marginTop: '20px',
-                            paddingTop: '40px'
+                            paddingTop: '50px'
                         }}>
                         <Row>
                             {dogState.map((dog) => (
-                            <Col className="container-fluid" key={dog.id} dog={dog} xs={12} md={4} lg={3}>
+                            <Col key={dog.id} dog={dog} xs={12} md={4} lg={3}>
                                 <Card style={{ 
                                     width: '18rem', 
                                     height: '25rem',
                                     margin: '15px',
-                                    boxShadow: '1px 2px 5px black',
+                                    boxShadow: '1px 2px 5px grey',
                                     }}>
                                     <Card.Header style={{ 
                                         height: '15rem',
                                         textAlign: 'center',
-                                        backgroundColor: '#D9E3DA',
+                                        backgroundColor: '#83D9DB',
                                     }}>
                                         <Image 
                                             src={dog.image ? dog.image : placeholder} 
@@ -80,9 +96,9 @@ const Dogs = () => {
                                             onLoad={handleImageLoad}
                                             roundedCircle/>
                                     </Card.Header>
-                                    <Card.Body>
-                                        {/* <Favorite /> */}
+                                    <Card.Body style={ cardBody }>
                                         <Card.Title as="h2">{dog.name}</Card.Title>
+                                        {/* <FontAwesomeIcon icon={faHeart} /> */}
                                         <Card.Text style={{
                                         }}>
                                             <p>{dog.age} {dog.gender} {dog.breed}    
