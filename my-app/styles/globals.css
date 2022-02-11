@@ -215,9 +215,27 @@ p span {
 }
 
 .adoptForm {
-  margin: 25px;
-  padding: 16px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #23022e;
 }
+
+#howToAdopt {
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #23022e;
+  justify-content: center;
+
+}
+
+#howToAdopt p {
+  text-align: justify;
+}
+
 
 .formSection {
   border: solid rgb(217, 224, 233) 1px;
@@ -227,7 +245,7 @@ p span {
 }
 
 #formBody {
-  padding-top: 70px;
+  padding-top: 40px;
 }
 
 .formBanner {
@@ -236,10 +254,17 @@ p span {
   padding: 10px;
   padding-top: 10vh;
   padding-bottom: 5px;
-  margin-bottom: 2px;
+  margin-bottom: 20px;
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-
+#formBtn {
+  /* background-color: #D1B0CF;
+  color: white;
+  border: #D1B0CF */
+  background-color: magenta;
+  color: white;
+  border: magenta;
+}

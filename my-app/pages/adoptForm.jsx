@@ -100,6 +100,11 @@ const handleImageLoad = (event) => {
           <h2 className="name">{dogState.name}</h2>
         </section>
 
+        <section className="form" id="howToAdopt">
+          <h1>Thank you for wanting to bring {dogState.name} into their furr-ever home!</h1>
+          <p>We're sure you are a match perfect for eachother. You may stop by during regular operating hours anytime to bond with your new pup. we ask that you call ahead when looking for a specific animal to make sure you don't arrive while they are in clinic. All dogs will be vaccinated and micro-chipped upon time of adoption. Dogs older than two years will be spayed and neutered. If your adoptee is under two, you may bring them in after they are fully grown to be spayed and neutered for free. All dogs are currently free to adopt, however we do accept donations to help offset opperating costs. Please fill out your information for a background check below so we can begin the approval process. Upon approval, we will reach out to schedule an interview and meet and greet with {dogState.name}.</p>
+        </section>
+
         <div id="formBody">
         <Form className="adoptForm" onSubmit={handleSubmit}>
         <div className="formSection">
@@ -295,7 +300,7 @@ const handleImageLoad = (event) => {
     <Form.Check type="checkbox" label="Check for Adoption Updates" />
   </Form.Group>
 
-  <Button variant="primary" type="submit">
+  <Button type="submit" id="formBtn">
     Submit
   </Button>
 </Form>
