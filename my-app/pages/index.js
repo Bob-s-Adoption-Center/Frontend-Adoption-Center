@@ -14,7 +14,7 @@ export default function Home({ message }) {
       <main className="main">
 
         <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-
+{/* top dog banner */}
           <div className="col-md-5 p-lg-5 mx-auto my-5">
             <h1 className="display-4 fw-normal">Bob's Adoption Center</h1>
             <img
@@ -38,12 +38,12 @@ export default function Home({ message }) {
           <div className="product-device shadow-sm d-none d-md-block"></div>
           <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
         </div>
-
+{/* foster volunteer fight */}
         <div
           className="d-md-flex flex-md-equal w-90 my-md-3 ps-md-3"
           id="foster"
         >
-          <div className="side-card me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+          <div className="side-card me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" id="action">
             <div className="my-3 py-3">
               <h2 className="display-5">BECOME A FOSTER HERO</h2>
               <p className="lead" style={{ color: "white" }}>
@@ -100,15 +100,15 @@ export default function Home({ message }) {
           </div>
         </div>
 
-        {/* trying another div here */}
+        {/*  paws trying another div here */}
         <h3>
           <p style={{ textAlign: "center", color: "purple" }}>
             YOUR PET ADOPTION JOURNEY
           </p>
         </h3>
-        <div className="container clearfix">
-          <ul className="row">
-            <li className="col-auto">
+        <div className="d-md-flex flex-md-equal w-90 my-md-3 ps-md-3">
+          <ul className="side-card me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+            <li className="my-3 p-3">
               <img
                 className="card-img-top"
                 src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-search.png"
@@ -125,7 +125,7 @@ export default function Home({ message }) {
                 <a href="/pet-search/">search</a>.
               </p>
             </li>
-            <li className="col-auto">
+            <li className="my-3 p-3">
               <img
                 className="card-img-top"
                 src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-hearts.png"
@@ -141,7 +141,7 @@ export default function Home({ message }) {
                 about how to meet and adopt the pet.
               </p>
             </li>
-            <li className="col-auto">
+            <li className="my-3 p-3">
               <img
                 className="card-img-top"
                 src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-house.png"
