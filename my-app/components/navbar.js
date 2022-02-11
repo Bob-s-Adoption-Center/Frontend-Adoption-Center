@@ -4,7 +4,7 @@ import React, { Component, Fragment } from "react";
 class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style={{backgroundColor: "#83D9DB"}}>
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             Bob's Adoption Center

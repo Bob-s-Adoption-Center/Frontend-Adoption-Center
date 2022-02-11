@@ -34,22 +34,30 @@ class Footer extends Component {
         </ul>
         <p className="text-center">© 2022 Company, Inc</p>
         <ul className="nav justify-content-center">
+          <li className="nav-item">
           <FaFacebook
             className="fa-2x"
             style={{ fontSize: "3em", color: "blue" }}
           />
+          </li>
+          <li className="nav-item">
           <FaLinkedin
             className="fa-2x"
             style={{ fontSize: "3em", color: "0077b6", marginLeft: "0.5em" }}
           />
+          </li>
+          <li className="nav-item">
           <FcGoogle
             className="fa-2x"
             style={{ fontSize: "3em", color: "90e0ef", marginLeft: "0.5em" }}
           />
+          </li>
+          <li className="nav-item">
           <FaTwitter
             className="fa-2x"
-            style={{ fontSize: "3em", color: "90e0ef", marginLeft: "0.5em" }}
+            style={{ fontSize: "3em", color: "ade8f4", marginLeft: "0.5em" }}
           />
+          </li>
         </ul>
       </footer>
     );
