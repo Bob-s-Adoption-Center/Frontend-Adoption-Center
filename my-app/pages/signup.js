@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Footer from '../components/footer';
-import Navbar from "../components/navbar";
+import Navbar from "../components/navbarDogs";
 
 const signup = () => {
   const [email, setEmail] = useState("");
@@ -66,8 +66,9 @@ const signup = () => {
           </div>
           <button
             onClick={handleSignUp}
-            className="w-100 btn btn-lg btn-primary"
+            className="w-100 btn btn-lg"
             type="submit"
+            style={{backgroundColor: "magenta", color: "black"}}
           >
             Sign up
           </button>
