@@ -4,8 +4,8 @@ import React, {useState,useEffect} from 'react';
 import Image from "react-bootstrap/Image";
 import Footer from "../components/footer";
 import NavbarDogs from '../components/navbarDogs';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 
 const Dogs = () => {
@@ -17,20 +17,20 @@ const Dogs = () => {
             marginTop: '10px',
             width: '200px',
             height: '200px',
-            border: '4px solid whitesmoke',
+            border: '2px solid whitesmoke',
         };
 
         const favstyle = {
-            position: 'absolute',
-            top: '0px',
-            right: '0px',
-        
+            // position: 'absolute',
+            // top: '0px',
+            // right: '0px',
+            alignSelf: 'flex-end'
         };
 
         const cardBody = {
             display:'flex',
             flexDirection:'column',
-            justifyContent:'space-between',
+            
         };
 
         const handleImageLoad = (event) => {
@@ -119,7 +119,7 @@ const Dogs = () => {
                                             pathname: '/dogDetail/',
                                             query: { dogId: dog.id },
                                         }}>
-                                            <a className="btn view-btn">View Me!</a>
+                                            <a className="btn view-btn" style={{ width: '75%', margin: 'auto' }}>View Me!</a>
                                         </Link>
                                     </Card.Body>
                                 </Card>
