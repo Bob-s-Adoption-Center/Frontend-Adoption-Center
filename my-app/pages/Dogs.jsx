@@ -36,7 +36,6 @@ const Dogs = () => {
         const handleImageLoad = (event) => {
             const imageHeight = event.target.clientHeight;
             const imageWidth = event.target.clientWidth;
-            console.log(event)
     
             if (imageHeight > imageWidth) {
                 event.target.className="circular--portrait"

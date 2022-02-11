@@ -1,18 +1,56 @@
-import React, { useState, Component, Fragment } from 'react';
+import React, { useState, Component, Fragment, useEffect } from 'react';
 import {Form, Row, Col, Button} from 'react-bootstrap'
 // import Jumbotron from 'react-bootstrap/Jumbotron'
 import NavbarDogs from '../components/navbarDogs';
 import Footer from '../components/footer';
+import { useRouter } from 'next/router';
 
 
 
-function adoptForm(props) {
+function adoptForm() {
 
     //set an initial state for the form
     const initialState = {name:""}
-
-    //store the sauce form in state
+    const router = useRouter();
+    
+    const {formByDogID} = router.query;
+    
     const [formState, setFormState]= useState(initialState)
+    const [dogState, setDogState] = useState({});
+    
+
+    const fetchDogDetail = async () => {
+    try {
+      const res = await fetch(`http://localhost:3001/dogs/dogDetail/${formByDogID}`, {
+          method: 'GET'
+      });
+      const data = await res.json();
+      setDogState(data.dog);
+      console.log(data.dog)
+  } catch(err) {
+      console.log(err);
+  }
+}
+
+useEffect(() => {
+  fetchDogDetail();
+  }, [formByDogID]);
+
+
+
+const handleImageLoad = (event) => {
+  const imageHeight = event.target.clientHeight;
+  const imageWidth = event.target.clientWidth;
+ 
+
+  if (imageHeight > imageWidth) {
+      event.target.className="circular--portrait"
+  }else if(imageHeight < imageWidth) {
+      event.target.className="circular--landscape"
+  }else {
+      event.target.className="circular--square"
+  }
+}  
 
     //update name state when an input changes
     const handleChange = (e) => {
@@ -31,9 +69,8 @@ function adoptForm(props) {
         setFormState(initialState)
     }
 
-    //create new sauce in database
     const postAdopt = async () => {
-        await fetch(`http://localhost:3000/adoptForm`, {
+        await fetch(`http://localhost:3000/newInquiry`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -43,24 +80,28 @@ function adoptForm(props) {
                 
             })
         })
-        window.location.assign('/adoptForm')
+        //window.location.assign('/adoptForm')
     }
 
 
     return (
         <>
-        {/* <Jumbotron>
-            <h1>Hello, world!</h1>
-            <p>
-                This is a simple hero unit, a simple jumbotron-style component for calling
-                extra attention to featured content or information.
-            </p>
-            <p>
-                <Button bsStyle="primary">Learn more</Button>
-            </p>
-        </Jumbotron>; */}
         <NavbarDogs/>
-        <Form className="adoptForm">
+        <section className="formBanner">
+          <div className="dog-img">
+              <img 
+                  id="profile-img"
+                  src={dogState.image} 
+                  alt={"photo of a " + dogState.color + " " + dogState.breed + " named " + dogState.name}
+                  onLoad={handleImageLoad}
+              />
+          </div>
+
+          <h2 className="name">{dogState.name}</h2>
+        </section>
+
+        <div id="formBody">
+        <Form className="adoptForm" onSubmit={handleSubmit}>
         <div className="formSection">
         <h3>Contact Information</h3>
         <p3>Complete the questionaire below to begin this adoption inquiry.</p3>
@@ -69,7 +110,7 @@ function adoptForm(props) {
         <Row className="mb-3">
     <Form.Group as={Col} controlId="formGridFname">
       <Form.Label>First Name</Form.Label>
-      <Form.Control type="text" placeholder="First Name" />
+      <Form.Control type="text" placeholder="First Name" onChange={handleChange}/>
     </Form.Group>
 
     <Form.Group as={Col} controlId="formGridLname">
@@ -114,21 +155,58 @@ function adoptForm(props) {
       <Form.Label>State</Form.Label>
       <Form.Select defaultValue="Choose...">
         <option>Choose...</option>
-        <select>
-	<option value="AL">Alabama</option>
-	<option value="AK">Alaska</option>
-	<option value="AZ">Arizona</option>
-	<option value="AR">Arkansas</option>
-	<option value="CA">California</option>
-	<option value="CO">Colorado</option>
-	<option value="CT">Connecticut</option>
-	<option value="DE">Delaware</option>
-	<option value="DC">District Of Columbia</option>
-	<option value="FL">Florida</option>
-	<option value="GA">Georgia</option>
-	<option value="HI">Hawaii</option>
-	<option value="ID">Idaho</option>
-  </select>
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="DC">District Of Columbia</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
+  
 
       </Form.Select>
     </Form.Group>
@@ -156,7 +234,57 @@ function adoptForm(props) {
       <Form.Label>Issuing State</Form.Label>
       <Form.Select defaultValue="Choose...">
         <option>Choose...</option>
-        <option>...</option>
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="DC">District Of Columbia</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
       </Form.Select>
     </Form.Group>
   </Row>
@@ -171,6 +299,7 @@ function adoptForm(props) {
     Submit
   </Button>
 </Form>
+</div>
 <Footer/>
 
         </>

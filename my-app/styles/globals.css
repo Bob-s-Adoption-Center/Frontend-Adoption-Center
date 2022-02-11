@@ -1,3 +1,4 @@
+
 html,
 body {
   padding-top: 20%vh;
@@ -224,3 +225,21 @@ p span {
   padding: 18px;
   margin-bottom: 15px;
 }
+
+#formBody {
+  padding-top: 70px;
+}
+
+.formBanner {
+  background-color: #83D9DB;
+  color: white;
+  padding: 10px;
+  padding-top: 10vh;
+  padding-bottom: 5px;
+  margin-bottom: 2px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+
