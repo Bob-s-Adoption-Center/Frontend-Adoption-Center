@@ -36,7 +36,6 @@ const Dogs = () => {
         const handleImageLoad = (event) => {
             const imageHeight = event.target.clientHeight;
             const imageWidth = event.target.clientWidth;
-            console.log(event)
     
             if (imageHeight > imageWidth) {
                 event.target.className="circular--portrait"
@@ -113,8 +112,8 @@ const Dogs = () => {
                                         {/* <FontAwesomeIcon icon={faHeart} /> */}
                                         <Card.Text style={{
                                         }}>
-                                            <p>{dog.age} {dog.gender} {dog.breed}    
-                                            </p>
+                                            {dog.age} {dog.gender} {dog.breed}    
+                                            
                                         </Card.Text>
                                         <Link href={{
                                             pathname: '/dogDetail/',

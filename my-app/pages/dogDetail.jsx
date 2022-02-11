@@ -3,7 +3,8 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Footer from '../components/footer';
-import Navbar from '../components/navbar';
+import NavbarDogs from '../components/navbarDogs';
+import Stack from 'react-bootstrap/Stack';
 
 
 function DogDetail() {
@@ -21,6 +22,7 @@ function DogDetail() {
             });
             const data = await res.json();
             setDogState(data.dog);
+            console.log(data.dog)
         } catch(err) {
             console.log(err);
         }
@@ -49,11 +51,11 @@ function DogDetail() {
         dogState
         ?
             <>
-            <Navbar/>
+            <NavbarDogs/>
             <div className="body">
 
                 <section className="hero is-primary">
-                    <Link href="/Dogs"><a id="backLink">Back to Dogs</a></Link>
+
                     <div className="profile-top">
                         <h1 className="status">{dogState.status}</h1>
 
@@ -66,21 +68,38 @@ function DogDetail() {
                             />
                         </div>
 
-                        <h2 class="name">{dogState.name}</h2>
+                        <h2 className="name">{dogState.name}</h2>
                     </div>
                 </section>
-                {/* <h2 className="sectionTag">Availability:</h2>
-                <p>{dogState.status}</p> */}
-                <div className="d-grid gap-2">
 
-                    <Button className="view-btn" href="/adoptForm" variant="success" size="lg">
+                <div className="d-grid gap-2" >
+
+                    <Link href={{
+                                    pathname: '/adoptForm/',
+                                    query: { formByDogID: dogState.id },
+                                }}>
+
+                        <Button href="/adoptForm" size="lg" id="adoptBtn">
                         Click to Adopt Me!
-                    </Button>
+                        </Button>
+                    </Link>
+                    {/* <div className="btn-group mb-3 gap-2 col-6 mx-auto">
+                        <Button  size="lg">
+                        Foster Me
+                        </Button>{' '}
+                        <Button  size="lg">
+                        Sponsor Me
+                        </Button>
+                    </div> */}
+
+
+
                 </div>
+
                 <hr></hr>
 
                 <h2 className="sectionTag">About Me:</h2>
-                <p class="description">{dogState.description} <span>You can find me located at: {dogState.location}.</span></p>
+                <p className="description">{dogState.description} <span>You can find me located at: {dogState.location}.</span></p>
 
                 <h2 className="sectionTag">Additional Details:</h2>
 
@@ -183,6 +202,7 @@ function DogDetail() {
                         </div>
                     </div>
                 </div> 
+                <Link href="/Dogs"><a id="backLink">Back to Dogs</a></Link>
 
             </div>
             <Footer/>

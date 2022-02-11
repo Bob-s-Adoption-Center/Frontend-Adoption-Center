@@ -66,8 +66,9 @@ const signup = () => {
           </div>
           <button
             onClick={handleSignUp}
-            className="w-100 btn btn-lg btn-primary"
+            className="w-100 btn btn-lg"
             type="submit"
+            style={{backgroundColor: "magenta", color: "black"}}
           >
             Sign up
           </button>

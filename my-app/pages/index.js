@@ -58,13 +58,13 @@ export default function Home({ message }) {
             </div>
             <div className="bg-light shadow-sm mx-auto"></div>
           </div>
-          <div className="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div className="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-wrap">
             <div className="my-3 p-3">
               <h2 className="display-5">VOLUNTEER TO HELP ANIMALS</h2>
               <p className="lead">
                 Love animals? We’ve got a volunteer job for you, whether it’s
                 working directly with animals, working behind the scenes or
-                helping out at our next special event..
+                helping out at our next special event.
               </p>
               <a
                 className="learn-btn btn btn-outline-secondary"
@@ -99,7 +99,7 @@ export default function Home({ message }) {
 
         {/* trying another div here */}
         <h3>
-          <p style={{ textAlign: "center", color: "black" }}>
+          <p style={{ textAlign: "center", color: "purple" }}>
             YOUR PET ADOPTION JOURNEY
           </p>
         </h3>
@@ -109,9 +109,11 @@ export default function Home({ message }) {
               <img
                 className="card-img-top"
                 src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-search.png"
-                alt=""
+                alt="adoption journey"
                 width="500"
                 height="365"
+                style={{width: "40vw", height: "40vh", margin: "auto", justifyContent: "center"}}
+
               ></img>
               <h3>Search</h3>
               <p>
@@ -127,6 +129,7 @@ export default function Home({ message }) {
                 alt=""
                 width="500"
                 height="365"
+                style={{width: "40vw", height: "40vh", margin: "auto", justifyContent: "center"}}
               ></img>
               <h3>Meet</h3>
               <p>
@@ -142,6 +145,7 @@ export default function Home({ message }) {
                 alt=""
                 width="500"
                 height="365"
+                style={{width: "40vw", height: "40vh", margin: "auto", justifyContent: "center"}}
               ></img>
               <h3>Adopt</h3>
               <p>

@@ -12,7 +12,7 @@ class NavbarDogs extends Component {
             Bob's Adoption Center
           </a>
           <button
-            class="navbar-toggler navbar-light"
+            className="navbar-toggler navbar-light"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarCollapse"

@@ -31,7 +31,7 @@ const signin = () => {
     <div className="form-signin">
           <img className="signInImage" src="./img/dog-banner.png" alt="10 dogs sitting alongside side each other serving as the sign in page banner" width="275" height="75"></img>
         <form action="/signup" method="post">
-          <h1 className="h3 mb-3 fw-normal" style={{textAlign: "center"}}>Welcome Back! Please sign in</h1>
+          <h1 className="h3 mb-3 fw-normal" style={{textAlign: "center"}}>Welcome Back!</h1>
           <div className="form-floating">
             <input
               type="email"
@@ -70,6 +70,7 @@ const signin = () => {
             onClick={handleSignIn}
             className="w-100 btn btn-lg btn-primary"
             type="submit"
+            style={{backgroundColor: "magenta", color: "black"}}
           >
             Sign in
           </button>
