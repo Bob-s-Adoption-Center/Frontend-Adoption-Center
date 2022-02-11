@@ -1,10 +1,13 @@
 import React, { Component, Fragment } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaw } from '@fortawesome/free-solid-svg-icons';
 
 class NavbarDogs extends Component {
   render() {
     return (
-      <nav class="navbar navbar-expand-md fixed-top">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
+        <FontAwesomeIcon icon={faPaw} style={{ color: '#d3b2d1', marginRight: '5px' }} />
           <a class="navbar-brand" href="#">
             Bob's Adoption Center
           </a>

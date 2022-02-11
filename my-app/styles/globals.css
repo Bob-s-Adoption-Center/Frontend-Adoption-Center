@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 html,
 body {
   padding-top: 20%vh;
@@ -5,6 +7,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
+
 
 .body {
   padding-top: 3vh;
@@ -14,7 +18,7 @@ body {
   margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background: linear-gradient(rgb(217, 227, 218), rgb(217, 227, 218) 28vh, rgb(254, 254, 227) 10.5vh, rgb(254, 254, 227) 100vh );
+  background: linear-gradient(rgb(217, 227, 218), rgb(255, 255, 255) 28vh, rgb(255, 255, 255) 10.5vh, rgb(255, 255, 255) 100vh );
   /* background-color: rgb(254, 254, 227); */
   /* background-color: #fefee3; */
   /* background-color: #f0ead2; */
@@ -80,26 +84,34 @@ a {
 }
 
 a:hover {
-  background-color: pink;
-  border-radius: 20%;
+  opacity: 0.75;
 }
 
 #adoptBtn {
-  background-color: #F28482;
+  background-color: #000000;
+  color: white;
   
 }
 
 .view-btn {
-  background-color: #D1B0CF !important;
+  background-color: #d3b2d1 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.learn-btn {
+  background-color: #83D9DB !important;
+  color: white !important;
+  border: none !important;
 }
 
 button.navbar-toggler{
-  color: black !important;
+  color: #d3b2d1 !important;
 }
 
 .description {
   text-align: justify;
-  color: #84A59D;
+  color: #000000;
 }
 
 .circular--square {
@@ -142,10 +154,11 @@ button.navbar-toggler{
   color: #073b3a;
 }
 p {
-  color: #073b3a;
+  color: #000000;
 }
 p span {
-  color: #073b3a;
+  color: #000000;
+  font-weight: bold;
 }
 
 #name {
@@ -202,3 +215,20 @@ p span {
     font-size: 3.5rem;
   }
 }
+
+.adoptForm {
+  margin: 25px;
+  padding: 16px;
+}
+
+.formSection {
+  border: solid rgb(217, 224, 233) 1px;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 15px;
+}
+
+.side-card {
+  background-color: #83D9DB !important;
+}
+
