@@ -31,6 +31,8 @@ body {
 
 #backLink {
   text-decoration: none;
+  color: #235789;
+  font-weight: bold;
 }
 #backlink:hover {
   text-decoration: underline;
@@ -78,6 +80,11 @@ ul {
   background-color: #83D9DB !important;
 }
 
+/* .main {
+  justify-content: center;
+  align-items: center;
+} */
+
 #navDog a {
   color: black !important;
 }
@@ -105,7 +112,7 @@ a:hover {
   border: none !important;
 }
 
-button.navbar-toggler{
+button .navbar-toggler{
   color: #d3b2d1 !important;
 }
 
@@ -280,4 +287,11 @@ p span {
   background-color: magenta;
   color: white;
   border: magenta;
+}
+
+
+#btmCards a {
+  color: #235789;
+  font-weight: bold;
+  text-decoration: none;
 }
