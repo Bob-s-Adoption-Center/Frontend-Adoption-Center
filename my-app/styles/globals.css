@@ -6,8 +6,6 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-
-
 .body {
   padding-top: 3vh;
   padding-left: 15vw;
@@ -105,36 +103,24 @@ a:hover {
 }
 
 .view-btn {
-<<<<<<< HEAD
-  background-color: #d1b0cf !important;
-}
-
-button.navbar-toggler {
-  color: black !important;
-=======
   background-color: #d3b2d1 !important;
   color: white !important;
   border: none !important;
 }
 
 .learn-btn {
-  background-color: #83D9DB !important;
+  background-color: #83d9db !important;
   color: white !important;
   border: none !important;
 }
 
-button .navbar-toggler{
+button .navbar-toggler {
   color: #d3b2d1 !important;
->>>>>>> a9165f935bdea2d45ba9f4894dd48936eff16b67
 }
 
 .description {
   text-align: justify;
-<<<<<<< HEAD
-  color: #84a59d;
-=======
   color: #000000;
->>>>>>> a9165f935bdea2d45ba9f4894dd48936eff16b67
 }
 
 .circular--square {
@@ -274,7 +260,7 @@ p span {
 }
 
 .side-card {
-  background-color: #83D9DB !important;
+  background-color: #83d9db !important;
 }
 
 #formBody {
@@ -301,7 +287,6 @@ p span {
   color: white;
   border: magenta;
 }
-
 
 #btmCards a {
   color: #235789;
