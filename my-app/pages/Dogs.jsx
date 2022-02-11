@@ -112,8 +112,8 @@ const Dogs = () => {
                                         {/* <FontAwesomeIcon icon={faHeart} /> */}
                                         <Card.Text style={{
                                         }}>
-                                            <p>{dog.age} {dog.gender} {dog.breed}    
-                                            </p>
+                                            {dog.age} {dog.gender} {dog.breed}    
+                                            
                                         </Card.Text>
                                         <Link href={{
                                             pathname: '/dogDetail/',

@@ -32,9 +32,9 @@ class Navbar extends Component {
                   Dogs
                 </a>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <a
-                  class="nav-link"
+                  className="nav-link"
                   href="https://www.verizon.com/about/news/learn-grow-thrive"
                   target="_blank"
                 >

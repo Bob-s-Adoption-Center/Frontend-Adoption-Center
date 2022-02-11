@@ -16,12 +16,12 @@ function adoptForm() {
     const {formByDogID} = router.query;
     
     const [formState, setFormState]= useState(initialState)
-    const [dogState, setDogState] = useState({});
+    const [dogState, setDogState] = useState({name: "", image: ""});
     
 
     const fetchDogDetail = async () => {
     try {
-      const res = await fetch(`http://localhost:3001/dogs/dogDetail/${formByDogID}`, {
+      const res = await fetch(`http://localhost:3001/dogs/${formByDogID}`, {
           method: 'GET'
       });
       const data = await res.json();
@@ -80,7 +80,7 @@ const handleImageLoad = (event) => {
                 
             })
         })
-        //window.location.assign('/adoptForm')
+        
     }
 
 
@@ -92,7 +92,7 @@ const handleImageLoad = (event) => {
               <img 
                   id="profile-img"
                   src={dogState.image} 
-                  alt={"photo of a " + dogState.color + " " + dogState.breed + " named " + dogState.name}
+                  alt={"photo of a dog named " + dogState.name}
                   onLoad={handleImageLoad}
               />
           </div>
@@ -109,7 +109,7 @@ const handleImageLoad = (event) => {
         <Form className="adoptForm" onSubmit={handleSubmit}>
         <div className="formSection">
         <h3>Contact Information</h3>
-        <p3>Complete the questionaire below to begin this adoption inquiry.</p3>
+        <p>Complete the questionaire below to begin this adoption inquiry.</p>
         <br/>
         <br/>
         <Row className="mb-3">
@@ -227,7 +227,7 @@ const handleImageLoad = (event) => {
   <div className="formSection">
   <Row className="mb-3">
   <h3>Background Check Information</h3>
-  <p3>Verifiable ID required for adoption process.</p3>
+  <p>Verifiable ID required for adoption process.</p>
   <br/>
   <br/>
     <Form.Group as={Col} controlId="formGridDocID">
