@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Footer from '../components/footer';
-import Navbar from "../components/navbarDogs";
+import Navbar from "../components/navbar";
 
 const signup = () => {
   const [email, setEmail] = useState("");

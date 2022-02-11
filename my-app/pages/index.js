@@ -3,7 +3,6 @@ import "../styles/Home.module.css";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import { useContext } from "react";
-import { FaAlignJustify } from "react-icons/fa";
 
 export default function Home({ message }) {
   return (
@@ -11,8 +10,11 @@ export default function Home({ message }) {
       <nav>
         <Navbar />
       </nav>
-      <main>
+
+      <main className="main">
+
         <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+
           <div className="col-md-5 p-lg-5 mx-auto my-5">
             <h1 className="display-4 fw-normal">Bob's Adoption Center</h1>
             <img
@@ -26,8 +28,8 @@ export default function Home({ message }) {
               adoption.
             </p>
             <a
-              className="btn btn-outline-secondary"
-              style={{ color: "black", border: "solid black 2px" }}
+              className="view-btn btn btn-outline-secondary"
+              style={{ border: "none" }}
               href="/Dogs"
             >
               Look through our pets!
@@ -41,7 +43,7 @@ export default function Home({ message }) {
           className="d-md-flex flex-md-equal w-90 my-md-3 ps-md-3"
           id="foster"
         >
-          <div className="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-wrap">
+          <div className="side-card me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
             <div className="my-3 py-3">
               <h2 className="display-5">BECOME A FOSTER HERO</h2>
               <p className="lead" style={{ color: "white" }}>
@@ -50,7 +52,7 @@ export default function Home({ message }) {
                 life of an animal with a little extra TLC today.
               </p>
               <a
-                className="btn btn-outline-secondary"
+                className="view-btn btn btn-outline-secondary"
                 href="https://spca.org/adopt/foster/be-a-foster-hero/"
                 target="_blank"
               >
@@ -68,7 +70,7 @@ export default function Home({ message }) {
                 helping out at our next special event.
               </p>
               <a
-                className="btn btn-outline-secondary"
+                className="learn-btn btn btn-outline-secondary"
                 href="https://spca.org/support-us/volunteer/ways-to-volunteer/"
                 target="_blank"
               >
@@ -77,7 +79,7 @@ export default function Home({ message }) {
             </div>
             <div className="bg-dark shadow-sm mx-auto"></div>
           </div>
-          <div className="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-wrap">
+          <div className="side-card me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
             <div className="my-3 p-3">
               <h2 className="display-5">FIGHT ANIMAL CRUELTY</h2>
               <p className="lead" style={{ color: "white" }}>
@@ -87,7 +89,7 @@ export default function Home({ message }) {
                 neglect.
               </p>
               <a
-                className="btn btn-outline-secondary"
+                className="view-btn btn btn-outline-secondary"
                 href="https://spca.org/resources/help-animals/report-abuse/animal-cruelty-complaint/"
                 target="_blank"
               >
@@ -166,13 +168,13 @@ export default function Home({ message }) {
 
         <div
           className="d-md-flex flex-md-equal w-90 my-md-3 ps-md-3"
-          id="foster"
+          id="btmCards"
         >
-          <div className="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div className="side-card bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div className="my-3 py-3">
               <h4
                 class="item-title"
-                style={{ textAlign: "center", color: "purple" }}
+                style={{ textAlign: "center", color: "#23022e" }}
               >
                 <b>Clinics</b>
               </h4>
@@ -194,7 +196,7 @@ export default function Home({ message }) {
             <div className="my-3 p-3">
               <h4
                 class="item-title"
-                style={{ textAlign: "center", color: "orange" }}
+                style={{ textAlign: "center", color: "#f0c65c" }}
               >
                 <b>Online Pharmacy</b>
               </h4>{" "}
@@ -216,7 +218,7 @@ export default function Home({ message }) {
             <div className="my-3 p-3">
               <h4
                 class="item-title"
-                style={{ textAlign: "center", color: "red" }}
+                style={{ textAlign: "center", color: "#ed1c24" }}
               >
                 <b>Care &amp; Tips</b>
               </h4>{" "}
@@ -238,7 +240,7 @@ export default function Home({ message }) {
             <div className="my-3 py-3">
               <h4
                 class="item-title"
-                style={{ textAlign: "center", color: "indigo" }}
+                style={{ textAlign: "center", color: "#b74f6f" }}
               >
                 <b>Lost &amp; Found</b>
               </h4>{" "}
@@ -261,7 +263,7 @@ export default function Home({ message }) {
             <div className="my-3 p-3">
               <h4
                 class="item-title"
-                style={{ textAlign: "center", color: "green" }}
+                style={{ textAlign: "center", color: "#0f5257" }}
               >
                 <b>Get Help to Keep Your Pet</b>
               </h4>{" "}
@@ -284,7 +286,7 @@ export default function Home({ message }) {
             <div className="my-3 p-3">
               <h4
                 class="item-title"
-                style={{ textAlign: "center", color: "blue" }}
+                style={{ textAlign: "center", color: "#083d77" }}
               >
                 <b>Animal Surrender</b>
               </h4>{" "}

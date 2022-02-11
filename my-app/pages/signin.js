@@ -1,6 +1,6 @@
 import { useState, useContext, createContext } from "react";
 import Footer from '../components/footer';
-import Navbar from "../components/navbarDogs";
+import Navbar from "../components/navbar";
 import Head from 'next/head'
 
 const UserSignIn = createContext();
@@ -68,7 +68,7 @@ const signin = () => {
           </div>
           <button
             onClick={handleSignIn}
-            className="w-100 btn btn-lg btn-primary"
+            className="w-100 btn btn-lg "
             type="submit"
             style={{backgroundColor: "magenta", color: "black"}}
           >
