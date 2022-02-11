@@ -3,13 +3,13 @@ import React, { Component, Fragment } from "react";
 class NavbarDogs extends Component {
   render() {
     return (
-      <nav class="navbar navbar-expand-md fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+      <nav className="navbar navbar-expand-md fixed-top" id="navDog">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
             Bob's Adoption Center
           </a>
           <button
-            class="navbar-toggler navbar-light"
+            className="navbar-toggler navbar-light"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarCollapse"
