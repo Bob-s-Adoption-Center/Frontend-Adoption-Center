@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Footer from '../components/footer';
-import Navbar from '../components/navbar';
+import NavbarDogs from '../components/navbarDogs';
 
 
 function DogDetail() {
@@ -49,7 +49,7 @@ function DogDetail() {
         dogState
         ?
             <>
-            <Navbar/>
+            <NavbarDogs/>
             <div className="body">
 
                 <section className="hero is-primary">
@@ -71,9 +71,9 @@ function DogDetail() {
                 </section>
                 {/* <h2 className="sectionTag">Availability:</h2>
                 <p>{dogState.status}</p> */}
-                <div className="d-grid gap-2">
+                <div className="d-grid gap-2" >
 
-                    <Button href="/adoptForm" variant="success" size="lg">
+                    <Button href="/adoptForm" size="lg" id="adoptBtn">
                         Click to Adopt Me!
                     </Button>
                 </div>

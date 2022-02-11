@@ -1,6 +1,8 @@
 import React, { useState, Component, Fragment } from 'react';
 import {Form, Row, Col, Button} from 'react-bootstrap'
 // import Jumbotron from 'react-bootstrap/Jumbotron'
+import NavbarDogs from '../components/navbarDogs';
+import Footer from '../components/footer';
 
 
 
@@ -57,6 +59,7 @@ function adoptForm(props) {
                 <Button bsStyle="primary">Learn more</Button>
             </p>
         </Jumbotron>; */}
+        <NavbarDogs/>
         <Form className="adoptForm">
         <div className="formSection">
         <h3>Contact Information</h3>
@@ -111,7 +114,22 @@ function adoptForm(props) {
       <Form.Label>State</Form.Label>
       <Form.Select defaultValue="Choose...">
         <option>Choose...</option>
-        <option>...</option>
+        <select>
+	<option value="AL">Alabama</option>
+	<option value="AK">Alaska</option>
+	<option value="AZ">Arizona</option>
+	<option value="AR">Arkansas</option>
+	<option value="CA">California</option>
+	<option value="CO">Colorado</option>
+	<option value="CT">Connecticut</option>
+	<option value="DE">Delaware</option>
+	<option value="DC">District Of Columbia</option>
+	<option value="FL">Florida</option>
+	<option value="GA">Georgia</option>
+	<option value="HI">Hawaii</option>
+	<option value="ID">Idaho</option>
+  </select>
+
       </Form.Select>
     </Form.Group>
 
@@ -153,6 +171,7 @@ function adoptForm(props) {
     Submit
   </Button>
 </Form>
+<Footer/>
 
         </>
     );

@@ -68,6 +68,14 @@ const Dogs = () => {
                     backgroundColor: '#FFFFFF',
                  }}>
                     <NavbarDogs />
+                    <Image 
+                        src={"https://www.gptx.org/home/showpublishedimage/24568/636988022192470000"} 
+                        alt={"image of a new pet parent and her dog"}
+                        style={{
+                            width: '100%',
+                            marginTop: '55px',
+                            borderBottom: '20px solid #83D9DB'
+                        }} />
                     <Container 
                         style={{ 
                             flexWrap: 'wrap',
@@ -78,7 +86,10 @@ const Dogs = () => {
                         }}>
                         <Row>
                             {dogState.map((dog) => (
-                            <Col key={dog.id} dog={dog} xs={12} md={4} lg={3}>
+                            <Col key={dog.id} dog={dog} xs={12} md={4} lg={3} style={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                            }}>
                                 <Card style={{ 
                                     width: '18rem', 
                                     height: '25rem',

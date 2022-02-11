@@ -14,7 +14,8 @@ body {
   margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background: linear-gradient(rgb(217, 227, 218), rgb(217, 227, 218) 28vh, rgb(254, 254, 227) 10.5vh, rgb(254, 254, 227) 100vh );
+  background: linear-gradient(#D1B0CF, #D1B0CF 28vh, white 27.75vh, white 100vh );
+  /* background: linear-gradient(#83D9DB, #83D9DB 28vh, #D1B0CF 27.75vh, #D1B0CF 100vh ); */
   /* background-color: rgb(254, 254, 227); */
   /* background-color: #fefee3; */
   /* background-color: #f0ead2; */
@@ -67,7 +68,7 @@ ul {
   border-radius: 50%;
   margin-bottom: 2vh;
   border: 4px solid whitesmoke;
-  outline: 15px solid rgb(217, 227, 218); 
+  outline: 15px solid #D1B0CF; 
   /* border: 5px solid whitesmoke; */
 }
 
@@ -75,7 +76,7 @@ ul {
   background-color: #83D9DB !important;
 }
 
-a {
+#navDog a {
   color: black !important;
 }
 
@@ -84,7 +85,9 @@ a:hover {
 }
 
 #adoptBtn {
-  background-color: #F28482;
+  background-color: #D1B0CF;
+  color: white;
+  border: #D1B0CF
   
 }
 
@@ -138,17 +141,17 @@ button.navbar-toggler{
 }
 
 .sectionTag {
-  color: #073b3a;
+  color: #23022e;
 }
-p {
-  color: #073b3a;
+.description {
+  color: #23022e;
 }
 p span {
-  color: #073b3a;
+  font-weight: bold;
 }
 
 #name {
-  color: #073b3a;
+  color: #23022e;
 }
 
 .signInLayout {
@@ -200,6 +203,14 @@ p span {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
+}
+
+@media (min-width: 768px) {
+  ul .row {
+    display: inline-block;
+    flex-direction: row;
+  }
+
 }
 
 .adoptForm {

@@ -3,7 +3,7 @@ import React, { Component, Fragment } from "react";
 class NavbarDogs extends Component {
   render() {
     return (
-      <nav class="navbar navbar-expand-md fixed-top">
+      <nav class="navbar navbar-expand-md fixed-top" id="navDog">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             Bob's Adoption Center
