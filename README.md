@@ -20,6 +20,10 @@
 * Trunk based Development - merging to main, feature branches are short lived
 * Active engagement, everyone is heard
 
+## Miro Idea board for initial project planning on features and fixes
+
+<img width="578" alt="Miro" src="https://user-images.githubusercontent.com/68476218/174390769-3bf46bdd-b90a-4140-b4c1-2ebf95542b2e.PNG">
+
 <h3> User Story </h3>
 <img src="https://user-images.githubusercontent.com/15171226/153651391-7827c821-edb4-46e7-9e9a-5370b6d7f9dc.jpg" alt="Persona" width="800" height="700">
 
