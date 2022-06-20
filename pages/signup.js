@@ -2,7 +2,7 @@ import { useState } from "react";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 
-const signup = () => {
+const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -91,4 +91,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default SignUp;

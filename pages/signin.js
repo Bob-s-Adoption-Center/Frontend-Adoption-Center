@@ -5,7 +5,7 @@ import Head from "next/head";
 
 const UserSignIn = createContext();
 
-const signin = () => {
+const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -92,4 +92,4 @@ const signin = () => {
   );
 };
 
-export default signin;
+export default SignIn;
