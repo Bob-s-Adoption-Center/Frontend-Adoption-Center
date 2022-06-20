@@ -21,7 +21,7 @@ function adoptForm() {
 
     const fetchDogDetail = async () => {
     try {
-      const res = await fetch(`http://localhost:3001/dogs/${formByDogID}`, {
+      const res = await fetch(`https://bob-s-adoption-center.herokuapp.com/dogs/${formByDogID}`, {
           method: 'GET'
       });
       const data = await res.json();
@@ -70,7 +70,7 @@ const handleImageLoad = (event) => {
     }
 
     const postAdopt = async () => {
-        await fetch(`http://localhost:3000/newInquiry`, {
+        await fetch(`https://bob-s-adoption-center.herokuapp.com/newInquiry`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

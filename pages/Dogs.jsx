@@ -51,7 +51,7 @@ const Dogs = () => {
         const [dogState, setDogState] = useState([]);
 
         const fetchAllDogs = async () => {
-            const res = await fetch(`http://localhost:3001/dogs`);
+            const res = await fetch(`https://bob-s-adoption-center.herokuapp.com/dogs`);
             console.log(res)
             const data = await res.json();
             console.log(data.dogs);

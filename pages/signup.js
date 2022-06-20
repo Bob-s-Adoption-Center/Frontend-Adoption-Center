@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Footer from '../components/footer';
+import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 
 const signup = () => {
@@ -10,26 +10,36 @@ const signup = () => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     window.location.href = "/signin";
-    const response = await fetch("http://localhost:3001/signup", {
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
-    });
-    setMessage(`Success! Welcome ${email}!`)
+    const response = await fetch(
+      "https://bob-s-adoption-center.herokuapp.com/signup",
+      {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      }
+    );
+    setMessage(`Success! Welcome ${email}!`);
     const data = await response.json();
   };
-
 
   return (
     <main className="signInLayout">
       <Navbar />
-    <div className="form-signin">
-          <img className="signInImage" src="./img/dog-banner.png" alt="10 dogs sitting alongside side each other serving as the sign in page banner" width="275" height="75"></img>
+      <div className="form-signin">
+        <img
+          className="signInImage"
+          src="./img/dog-banner.png"
+          alt="10 dogs sitting alongside side each other serving as the sign in page banner"
+          width="275"
+          height="75"
+        ></img>
         <form action="/signup" method="post">
-          <h1 className="h3 mb-3 fw-normal" style={{textAlign: "center"}}>Welcome! Please sign up</h1>
+          <h1 className="h3 mb-3 fw-normal" style={{ textAlign: "center" }}>
+            Welcome! Please sign up
+          </h1>
           <div className="form-floating">
             <input
               type="email"
@@ -68,15 +78,15 @@ const signup = () => {
             onClick={handleSignUp}
             className="w-100 btn btn-lg"
             type="submit"
-            style={{backgroundColor: "magenta", color: "black"}}
+            style={{ backgroundColor: "magenta", color: "black" }}
           >
             Sign up
           </button>
         </form>
         <br></br>
-       <p style={{textAlign: "center"}}>{message}</p>
-       <Footer />
-    </div>
+        <p style={{ textAlign: "center" }}>{message}</p>
+        <Footer />
+      </div>
     </main>
   );
 };
