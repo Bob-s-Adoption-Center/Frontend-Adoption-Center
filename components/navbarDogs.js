@@ -1,15 +1,18 @@
 import React, { Component, Fragment } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaw } from '@fortawesome/free-solid-svg-icons';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaw } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 class NavbarDogs extends Component {
   render() {
     return (
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-        <div class="container-fluid">
-        <FontAwesomeIcon icon={faPaw} style={{ color: '#d3b2d1', marginRight: '5px' }} />
-          <a class="navbar-brand" href="#">
-            Bob's Adoption Center
+      <nav className="navbar navbar-expand-md navbar-dark fixed-top">
+        <div className="container-fluid">
+          <FontAwesomeIcon
+            icon={faPaw}
+            style={{ color: "#d3b2d1", marginRight: "5px" }}
+          />
+          <a className="navbar-brand" href="#">
+            Bob&apos;s Adoption Center
           </a>
           <button
             className="navbar-toggler navbar-light"
@@ -25,9 +28,9 @@ class NavbarDogs extends Component {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav me-auto mb-2 mb-md-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link className="nav-link active" aria-current="page" href="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link active" href="#">

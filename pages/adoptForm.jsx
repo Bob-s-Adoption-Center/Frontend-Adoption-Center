@@ -4,10 +4,11 @@ import {Form, Row, Col, Button} from 'react-bootstrap'
 import NavbarDogs from '../components/navbarDogs';
 import Footer from '../components/footer';
 import { useRouter } from 'next/router';
+import Image from 'next/dist/client/image';
 
 
 
-function adoptForm() {
+function AdoptForm() {
 
     //set an initial state for the form
     const initialState = {name:""}
@@ -89,7 +90,7 @@ const handleImageLoad = (event) => {
         <NavbarDogs/>
         <section className="formBanner">
           <div className="dog-img">
-              <img 
+              <Image 
                   id="profile-img"
                   src={dogState.image} 
                   alt={"photo of a dog named " + dogState.name}
@@ -102,7 +103,7 @@ const handleImageLoad = (event) => {
 
         <section className="form" id="howToAdopt">
           <h1>Thank you for wanting to bring {dogState.name} into their furr-ever home!</h1>
-          <p>We're sure you are a match perfect for eachother. You may stop by during regular operating hours anytime to bond with your new pup. we ask that you call ahead when looking for a specific animal to make sure you don't arrive while they are in clinic. All dogs will be vaccinated and micro-chipped upon time of adoption. Dogs older than two years will be spayed and neutered. If your adoptee is under two, you may bring them in after they are fully grown to be spayed and neutered for free. All dogs are currently free to adopt, however we do accept donations to help offset opperating costs. Please fill out your information for a background check below so we can begin the approval process. Upon approval, we will reach out to schedule an interview and meet and greet with {dogState.name}.</p>
+          <p>We&apos;re sure you are a match perfect for eachother. You may stop by during regular operating hours anytime to bond with your new pup. we ask that you call ahead when looking for a specific animal to make sure you don&apos;t arrive while they are in clinic. All dogs will be vaccinated and micro-chipped upon time of adoption. Dogs older than two years will be spayed and neutered. If your adoptee is under two, you may bring them in after they are fully grown to be spayed and neutered for free. All dogs are currently free to adopt, however we do accept donations to help offset opperating costs. Please fill out your information for a background check below so we can begin the approval process. Upon approval, we will reach out to schedule an interview and meet and greet with {dogState.name}.</p>
         </section>
 
         <div id="formBody">
@@ -311,5 +312,5 @@ const handleImageLoad = (event) => {
     );
 }
 
-export default adoptForm;
+export default AdoptForm;
 
