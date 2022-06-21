@@ -5,6 +5,7 @@
 - Lamin Suso
 - Amanda Renfro
 - Raven Redix 
+- Michael DunnOconnor
 
 # Team Guidelines:
 
