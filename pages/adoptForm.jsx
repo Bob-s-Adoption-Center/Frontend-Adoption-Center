@@ -90,12 +90,12 @@ const handleImageLoad = (event) => {
         <NavbarDogs/>
         <section className="formBanner">
           <div className="dog-img">
-              <Image 
+              {/* <Image 
                   id="profile-img"
                   src={dogState.image} 
                   alt={"photo of a dog named " + dogState.name}
                   onLoad={handleImageLoad}
-              />
+              /> */}
           </div>
 
           <h2 className="name">{dogState.name}</h2>

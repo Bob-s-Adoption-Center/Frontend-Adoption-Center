@@ -17,23 +17,23 @@ export default function Home({ message }) {
         <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
           <div className="col-md-5 p-lg-5 mx-auto my-5">
             <h1 className="display-4 fw-normal">Bob&apos;s Adoption Center</h1>
-            <Image
+            {/* <Image
               src={"img/dog-banner.png"}
               className="img-fluid"
               alt="Responsive image"
-            ></Image>
+            ></Image> */}
             <p className="lead fw-normal">
               Adopting a pet actually saves TWO LIVES as you free up space for
               another animal in need to find lasting love through the wonder of
               adoption.
             </p>
-            <Link
+            {/* <Link
               className="view-btn btn btn-outline-secondary"
               style={{ border: "none" }}
               href="/Dogs"
             >
               Look through our pets!
-            </Link>
+            </Link> */}
           </div>
           <div className="product-device shadow-sm d-none d-md-block"></div>
           <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
@@ -51,13 +51,13 @@ export default function Home({ message }) {
                 animal to be paired with a loving forever family. Change the
                 life of an animal with a little extra TLC today.
               </p>
-              <Link
+              {/* <Link
                 className="view-btn btn btn-outline-secondary"
                 href="https://spca.org/adopt/foster/be-a-foster-hero/"
                 target="_blank"
               >
                 Get Started
-              </Link>
+              </Link> */}
             </div>
             <div className="bg-light shadow-sm mx-auto"></div>
           </div>
@@ -69,13 +69,13 @@ export default function Home({ message }) {
                 working directly with animals, working behind the scenes or
                 helping out at our next special event.
               </p>
-              <Link
+              {/* <Link
                 className="learn-btn btn btn-outline-secondary"
                 href="https://spca.org/support-us/volunteer/ways-to-volunteer/"
                 target="_blank"
               >
                 Learn More
-              </Link>
+              </Link> */}
             </div>
             <div className="bg-dark shadow-sm mx-auto"></div>
           </div>
@@ -88,13 +88,13 @@ export default function Home({ message }) {
                 neighborhood, speak up and help put a stop to cruelty and
                 neglect.
               </p>
-              <Link
+              {/* <Link
                 className="view-btn btn btn-outline-secondary"
                 href="https://spca.org/resources/help-animals/report-abuse/animal-cruelty-complaint/"
                 target="_blank"
               >
                 Report Abuse
-              </Link>
+              </Link> */}
             </div>
             <div className="bg-light shadow-sm mx-auto"></div>
           </div>
@@ -113,12 +113,12 @@ export default function Home({ message }) {
             <ul className="text-image-grid  text-image-grid--center">
               <li overflow-wrap>
                 <div className="press">
-                  <Image
+                  {/* <Image
                     src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-search.png"
                     alt=""
                     width="500"
                     height="365"
-                  ></Image>
+                  ></Image> */}
                   <h6>Search</h6>
                   <p>
                     It&apos;s easy to find a dog or cat who&apos;s right for you
@@ -129,12 +129,12 @@ export default function Home({ message }) {
               </li>
               <li overflow-wrap>
                 <div className="press">
-                  <Image
+                  {/* <Image
                     src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-hearts.png"
                     alt=""
                     width="500"
                     height="365"
-                  ></Image>
+                  ></Image> */}
                   <h6>Meet</h6>
                   <p>
                     Once you find a pet, click &quot;learn more about me&quot;
@@ -145,13 +145,13 @@ export default function Home({ message }) {
               </li>
               <li overflow-wrap>
                 <div className="press">
-                  <Image
+                  {/* <Image
                     src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-house.png"
                     alt=""
                     width="500"
                     height="365"
                     overflow-wrap="true"
-                  ></Image>
+                  ></Image> */}
                   <h6>Adopt</h6>
                   <p>
                     The rescue or shelter will walk you through their adoption
@@ -182,13 +182,14 @@ export default function Home({ message }) {
                 Your best animal friend deserves the best care, and we are
                 committed to providing services you can afford.
               </p>
-              <Link
-                class="text-link"
-                href="https://www.spca.org/resources/clinic/clinic-services/"
-                target="_blank"
+              {/* <Link href="https://www.spca.org/resources/clinic/clinic-services/"
+target="_blank"
               >
+                <a className="text-link"
+                >
                 See Locations and Services
-              </Link>
+                </a>
+              </Link> */}
             </div>
             <div className="bg-dark shadow-sm mx-auto"></div>
           </div>
@@ -204,13 +205,13 @@ export default function Home({ message }) {
                 Order medicine, food and even treats online, and they’ll be
                 delivered direct to your door.
               </p>
-              <Link
+              {/* <Link
                 class="text-link"
                 href="https://spcaoftexas3.securevetsource.com/site/view/182142_HomeDelivery.pml"
                 target="_blank"
               >
                 Browse and Shop
-              </Link>
+              </Link> */}
             </div>
             <div className="bg-dark shadow-sm mx-auto"></div>
           </div>
@@ -226,13 +227,13 @@ export default function Home({ message }) {
                 You love your pet. Now learn all the best ways to care for him,
                 from training tips to health and safety guidelines.
               </p>
-              <Link
+              {/* <Link
                 class="text-link"
                 href="https://www.spca.org/resources/pet-needs/pet-tips-training/"
                 target="_blank"
               >
                 Get Expert Help for Your Animal
-              </Link>
+              </Link> */}
             </div>
             <div className="bg-light shadow-sm mx-auto"></div>
           </div>
@@ -248,14 +249,14 @@ export default function Home({ message }) {
                 Check our found pet listings and connect to other shelters so
                 you can be reunited with your pet.
               </p>
-              <Link
+              {/* <Link
                 class="text-link"
                 href="https://www.spca.org/resources/pet-needs/lost-found/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Get Fast Help for a Lost Animal
-              </Link>
+              </Link> */}
             </div>
             <div className="bg-dark shadow-sm mx-auto"></div>
           </div>
@@ -272,13 +273,13 @@ export default function Home({ message }) {
                 Struggling to provide medical care or food for your pet? We may
                 be able to provide temporary assistance.
               </p>
-              <Link
+              {/* <Link
                 class="text-link"
                 href="https://www.spca.org/resources/pet-needs/support-to-keep-your-pet/"
                 target="_blank"
               >
                 Learn How We Can Help
-              </Link>
+              </Link> */}
             </div>
             <div className="bg-light shadow-sm mx-auto"></div>
           </div>
@@ -295,13 +296,13 @@ export default function Home({ message }) {
                 Giving up a pet isn’t easy. If you’re wondering what your
                 options are, we’re here to help.
               </p>
-              <Link
+              {/* <Link
                 class="text-link"
                 href="https://www.spca.org/resources/pet-needs/rehome/"
                 target="_blank"
               >
                 Rehoming Options
-              </Link>
+              </Link> */}
             </div>
             <div className="bg-dark shadow-sm mx-auto"></div>
           </div>
