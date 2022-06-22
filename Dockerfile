@@ -28,4 +28,4 @@ COPY . .
 #expose the port in the docker container
 EXPOSE 3000
 # the command to start our app
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "build", "start" ]
