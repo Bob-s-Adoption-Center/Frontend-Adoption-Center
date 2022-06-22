@@ -17,7 +17,7 @@ RUN npm ci
 # copy files to image
 COPY . .
 # command to run tests
-CMD [ "npm", "run", "test" ]
+CMD [ "npm", "run", "build", "test" ]
 
 # specify test build
 FROM base as prod
