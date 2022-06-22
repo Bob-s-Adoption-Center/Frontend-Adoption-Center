@@ -5,6 +5,7 @@ import Image from "react-bootstrap/Image";
 import Footer from "../components/footer";
 import NavbarDogs from '../components/navbarDogs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -68,8 +69,8 @@ const Dogs = () => {
                  }}>
                     <NavbarDogs />
                     <Image 
-                        src={"https://www.sheknows.com/wp-content/uploads/2018/08/xz0csyrjxmtar7t3mds1.jpeg"} 
-                        alt={"image of a new pet parent and her dog"}
+                        src={"https://www.pet-insurance.co.uk/images/bravo/homepage-banner-dog.jpg"} 
+                        alt={"image of two dogs running through a grass field"}
                         style={{
                             width: '100%',
                             marginTop: '55px',
@@ -91,9 +92,9 @@ const Dogs = () => {
                             }}>
                                 <Card style={{ 
                                     width: '18rem', 
-                                    height: '25rem',
+                                    height: '26rem',
                                     margin: '15px',
-                                    boxShadow: '1px 2px 5px grey',
+                                    boxShadow: '1px 2px 5px grey'
                                     }}>
                                     <Card.Header style={{ 
                                         height: '15rem',
@@ -108,19 +109,40 @@ const Dogs = () => {
                                             roundedCircle/>
                                     </Card.Header>
                                     <Card.Body style={ cardBody }>
-                                        <Card.Title as="h2">{dog.name}</Card.Title>
-                                        {/* <FontAwesomeIcon icon={faHeart} /> */}
-                                        <Card.Text style={{
-                                        }}>
-                                            {dog.age} {dog.gender} {dog.breed}    
-                                            
-                                        </Card.Text>
-                                        <Link href={{
-                                            pathname: '/dogDetail/',
-                                            query: { dogId: dog.id },
-                                        }}>
-                                            <a className="btn view-btn" style={{ width: '75%', margin: 'auto' }}>View Me!</a>
-                                        </Link>
+                                        <div style={{
+                                            display: 'flex',
+                                            justifyContent: 'space-between'
+                                            }}>
+                                            <Card.Title as="h2">{dog.name}</Card.Title>
+                                            <FontAwesomeIcon icon={faHeart}/>
+                                        </div>
+                                        <div>
+                                            <Card.Text style={{ cardBody }}>
+                                                {dog.age} {dog.gender} {dog.breed}
+                                                <br></br> 
+                                                {dog.description.substring(0, 50)}...
+                                                <span>
+                                                    <Link href={{
+                                                        pathname: '/dogDetail/',
+                                                        query: { dogId: dog.id },
+                                                    }}>
+                                                        <a style={{ color: "black" }}>See more</a>
+                                                    </Link>
+                                                </span>   
+                                                
+                                            </Card.Text>
+                                        </div>
+                                        <div style={{ 
+                                            display:'flex',
+                                            flexDirection:'column',
+                                            marginTop: '10px' }}>
+                                            <Link href={{
+                                                pathname: '/dogDetail/',
+                                                query: { dogId: dog.id },
+                                            }}>
+                                                <a className="btn view-btn" style={{ width: '75%', margin: 'auto' }}>View Me!</a>
+                                            </Link>
+                                        </div>
                                     </Card.Body>
                                 </Card>
                             </Col>

@@ -38,3 +38,4 @@
 
 1. First clone the repository
 2. Open Application
+3. Run npm i
