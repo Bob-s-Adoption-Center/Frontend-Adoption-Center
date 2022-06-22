@@ -23,7 +23,7 @@
 //     // return <FindInitialState userId={user.user_id} recipeId={props.recipeId}/>
 // }
 
-const favoriteButton = () => {
+const FavoriteButton = () => {
     // define the state
     const [favState, setFavState] = useState(false)
 

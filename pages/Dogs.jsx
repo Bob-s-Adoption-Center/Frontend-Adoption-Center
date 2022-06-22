@@ -6,8 +6,6 @@ import Footer from "../components/footer";
 import NavbarDogs from '../components/navbarDogs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-
 
 const Dogs = () => {
         let placeholder = 'holder.js/100px180';
