@@ -35,3 +35,5 @@
   <img width="911" alt="kanbanboard" src="https://user-images.githubusercontent.com/15171226/153657579-130a125d-27a0-4cd0-b9e3-56619a6d8ff3.PNG">
 
 # How to start project
+
+1. First clone the repository
