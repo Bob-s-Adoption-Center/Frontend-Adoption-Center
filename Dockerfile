@@ -4,7 +4,7 @@
 FROM node:14.15.0 as base
 
 # specify the path of the working directory
-WORKDIR /app
+WORKDIR /Frontend-Adoption-Center
 
 # copy package.json for dependancy install
 COPY package.json package.json
