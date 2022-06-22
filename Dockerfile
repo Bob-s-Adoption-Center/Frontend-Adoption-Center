@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # specify my baseImage and (optionally) the version and alias
-FROM node:14.17.1 as base
+FROM node:14.15.0 as base
 
 # specify the path of the working directory
 WORKDIR /app
