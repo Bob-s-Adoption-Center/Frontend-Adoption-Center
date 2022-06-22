@@ -39,3 +39,4 @@
 1. First clone the repository
 2. Open Application
 3. Run npm i
+4. Start the server. Run "npm run dev"
