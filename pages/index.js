@@ -3,7 +3,7 @@ import "../styles/Home.module.css";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link"
 import Image from "next/image";
 
 export default function Home({ message }) {
@@ -17,11 +17,13 @@ export default function Home({ message }) {
         <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
           <div className="col-md-5 p-lg-5 mx-auto my-5">
             <h1 className="display-4 fw-normal">Bob&apos;s Adoption Center</h1>
-            {/* <Image
-              src={"img/dog-banner.png"}
+            <Image
+              src={"/img/dog-banner.png"}
+              width={660}
+              height={174}
               className="img-fluid"
               alt="Responsive image"
-            ></Image> */}
+            ></Image> 
             <p className="lead fw-normal">
               Adopting a pet actually saves TWO LIVES as you free up space for
               another animal in need to find lasting love through the wonder of
@@ -113,12 +115,12 @@ export default function Home({ message }) {
             <ul className="text-image-grid  text-image-grid--center">
               <li overflow-wrap>
                 <div className="press">
-                  {/* <Image
-                    src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-search.png"
+                  <Image
+                    src={"/img/image-grid-search.png"}
                     alt=""
                     width="500"
                     height="365"
-                  ></Image> */}
+                  ></Image>
                   <h6>Search</h6>
                   <p>
                     It&apos;s easy to find a dog or cat who&apos;s right for you
@@ -129,12 +131,12 @@ export default function Home({ message }) {
               </li>
               <li overflow-wrap>
                 <div className="press">
-                  {/* <Image
-                    src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-hearts.png"
+                  <Image
+                    src="/img/image-grid-hearts.png"
                     alt=""
                     width="500"
                     height="365"
-                  ></Image> */}
+                  ></Image> 
                   <h6>Meet</h6>
                   <p>
                     Once you find a pet, click &quot;learn more about me&quot;
@@ -145,13 +147,13 @@ export default function Home({ message }) {
               </li>
               <li overflow-wrap>
                 <div className="press">
-                  {/* <Image
-                    src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-house.png"
+                  <Image
+                    src="/img/image-grid-house.png"
                     alt=""
                     width="500"
                     height="365"
                     overflow-wrap="true"
-                  ></Image> */}
+                  ></Image>
                   <h6>Adopt</h6>
                   <p>
                     The rescue or shelter will walk you through their adoption

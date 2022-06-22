@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
-  experimental: {
-    outputStandalone: true,
+  images: {
+    domains: ['https://theshelterpetproject.org']
   }
 }
