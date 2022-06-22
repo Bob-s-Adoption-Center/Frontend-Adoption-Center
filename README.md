@@ -37,3 +37,4 @@
 # How to start project
 
 1. First clone the repository
+2. Open Application
