@@ -68,7 +68,7 @@ const Dogs = () => {
                  }}>
                     <NavbarDogs />
                     <Image 
-                        src={"https://www.gptx.org/home/showpublishedimage/24568/636988022192470000"} 
+                        src={"https://www.sheknows.com/wp-content/uploads/2018/08/xz0csyrjxmtar7t3mds1.jpeg"} 
                         alt={"image of a new pet parent and her dog"}
                         style={{
                             width: '100%',
