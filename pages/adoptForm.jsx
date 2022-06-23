@@ -4,7 +4,7 @@ import {Form, Row, Col, Button} from 'react-bootstrap'
 import NavbarDogs from '../components/navbarDogs';
 import Footer from '../components/footer';
 import { useRouter } from 'next/router';
-import Image from 'next/dist/client/image';
+import Image from 'next/image';
 
 
 
@@ -20,21 +20,21 @@ function AdoptForm() {
     const [dogState, setDogState] = useState({name: "", image: ""});
     
 
-    const fetchDogDetail = async () => {
-    try {
-      const res = await fetch(`https://bob-s-adoption-center.herokuapp.com/dogs/${formByDogID}`, {
-          method: 'GET'
-      });
-      const data = await res.json();
-      setDogState(data.dog);
-      console.log(data.dog)
-  } catch(err) {
-      console.log(err);
-  }
-}
+
 
 useEffect(() => {
-  fetchDogDetail();
+  const fetchDogDetail = async () => {
+      try {
+        const res = await fetch(`https://bob-s-adoption-center.herokuapp.com/dogs/${formByDogID}`, {
+            method: 'GET'
+        });
+        const data = await res.json();
+        setDogState(data.dog);
+        console.log(data.dog)
+      } catch(err) {
+        console.log(err);
+      }
+    }
   }, [formByDogID]);
 
 
@@ -90,12 +90,12 @@ const handleImageLoad = (event) => {
         <NavbarDogs/>
         <section className="formBanner">
           <div className="dog-img">
-              {/* <Image 
+              <Image 
                   id="profile-img"
                   src={dogState.image} 
                   alt={"photo of a dog named " + dogState.name}
                   onLoad={handleImageLoad}
-              /> */}
+              />
           </div>
 
           <h2 className="name">{dogState.name}</h2>

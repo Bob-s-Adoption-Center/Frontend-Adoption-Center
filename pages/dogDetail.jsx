@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Footer from '../components/footer';
 import NavbarDogs from '../components/navbarDogs';
 import Stack from 'react-bootstrap/Stack';
+import Image from 'next/image';
 
 
 function DogDetail() {
@@ -15,6 +16,8 @@ function DogDetail() {
     //use state for data fetch or form submission (because handle change)
     const [dogState, setDogState] = useState({});
 
+    let placeholder = 'http://holder.js/100px180';
+    
     const fetchDogDetail = async () => {
         try {
             const res = await fetch(`https://bob-s-adoption-center.herokuapp.com/dogs/${dogId}`, {
@@ -30,7 +33,7 @@ function DogDetail() {
 
     useEffect(() => {
         fetchDogDetail();
-        }, [dogId]);
+    }, [dogId]);
 
 
     const handleImageLoad = (event) => {
@@ -58,11 +61,11 @@ function DogDetail() {
 
                     <div className="profile-top">
                         <h1 className="status">{dogState.status}</h1>
-
+                        
                         <div className="dog-img">
-                            <img 
+                            <Image 
                                 id="profile-img"
-                                src={dogState.image} 
+                                src={dogState.image ? dogState.image : placeholder} 
                                 alt={"photo of a " + dogState.color + " " + dogState.breed + " named " + dogState.name}
                                 onLoad={handleImageLoad}
                             />
@@ -75,9 +78,11 @@ function DogDetail() {
                 <div className="d-grid gap-2" >
 
                     <Link href={{
-                                    pathname: '/adoptForm/',
-                                    query: { formByDogID: dogState.id },
-                                }}>
+                        pathname: '/adoptForm/',
+                        query: { formByDogID: dogState.id },
+                        }}
+                        passHref
+                    >
 
                         <Button href="/adoptForm" size="lg" id="adoptBtn">
                         Click to Adopt Me!
@@ -113,7 +118,7 @@ function DogDetail() {
                                             <circle cx="50" cy="50" r="20" />
                                         </clipPath>
                                     </defs>
-                                    <image xlinkHref="icons/id.jpeg" x="13" y="20" width="70" height="60" clipPath="url(#circleView)" />
+                                    <mage xlinkHref="icons/id.jpeg" x="13" y="20" width="70" height="60" clipPath="url(#circleView)" />
                                 </svg>
                              
                                 <h5 className="card-title">Pet Adoption ID:</h5>
@@ -130,7 +135,7 @@ function DogDetail() {
                                             <circle cx="50" cy="50" r="20" />
                                         </clipPath>
                                     </defs>
-                                    <image xlinkHref="icons/poodle.jpeg" x="23" y="25" width="60" height="50" clipPath="url(#circleView)" />
+                                    <img alt='Black and White Icon of a Poodle' xlinkHref="icons/poodle.jpeg" x="23" y="25" width="60" height="50" clipPath="url(#circleView)"/>
                                 </svg>
                                 <h5 className="card-title">Breed:</h5>
                                 <p className="card-text">{dogState.breed}</p>
@@ -146,7 +151,7 @@ function DogDetail() {
                                             <circle cx="50" cy="50" r="20" />
                                         </clipPath>
                                     </defs>
-                                    <image xlinkHref="icons/calendar.jpeg" x="20" y="25" width="60" height="50" clipPath="url(#circleView)" />
+                                    <img alt='Black and White Icon of Calendar with A Dog Paw' xlinkHref="icons/calendar.jpeg" x="20" y="25" width="60" height="50" clipPath="url(#circleView)"/>
                                 </svg>
                                 <h5 className="card-title">Age:</h5>
                                 <p className="card-text">{dogState.age}</p>
@@ -162,7 +167,7 @@ function DogDetail() {
                                             <circle cx="50" cy="50" r="20" />
                                         </clipPath>
                                     </defs>
-                                    <image xlinkHref="icons/gender.jpeg" x="20" y="25" width="60" height="50" clipPath="url(#circleView)" />
+                                    <img alt='Gender sign' xlinkHref="icons/gender.jpeg" x="20" y="25" width="60" height="50" clipPath="url(#circleView)"/>
                                 </svg>
                                 <h5 className="card-title">Gender:</h5>
                                 <p className="card-text">{dogState.gender}</p>
@@ -178,7 +183,7 @@ function DogDetail() {
                                             <circle cx="50" cy="50" r="20" />
                                         </clipPath>
                                     </defs>
-                                    <image xlinkHref="icons/weight.jpeg" x="20" y="25" width="60" height="50" clipPath="url(#circleView)" />
+                                    <img alt='Black and White Icon of Dog on a Weight Scale' xlinkHref="icons/weight.jpeg" x="20" y="25" width="60" height="50" clipPath="url(#circleView)"/>
                                 </svg>
                                 <h5 className="card-title">Size:</h5>
                                 <p className="card-text">{dogState.size}</p>
@@ -194,7 +199,7 @@ function DogDetail() {
                                             <circle cx="50" cy="50" r="20" />
                                         </clipPath>
                                     </defs>
-                                    <image xlinkHref="icons/color.jpeg" x="20" y="25" width="60" height="50" clipPath="url(#circleView)" />
+                                    <img alt='Pink and Yellow Icon of Dog Paw' xlinkHref="icons/color.jpeg" x="20" y="25" width="60" height="50" clipPath="url(#circleView)"/>
                                 </svg>
                                 <h5 className="card-title">Color:</h5>
                                 <p className="card-text">{dogState.color}</p>

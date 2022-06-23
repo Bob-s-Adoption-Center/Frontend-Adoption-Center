@@ -1,9 +1,10 @@
-import '../pages/_app'
+import '../pages/_app';
+import Image from 'next/image';
 
 const Card = ({dogs, results}) => {
     return (
 <div className="card">
-  <img src={results[0].photos['full']} className="card-img-top" alt="No image" />
+  <Image src={results[0].photos['full']} className="card-img-top" alt="No image"></Image>
   <div className="card-body">
     <h5 className="card-title">Name: {results[0].name}</h5>
     <p className="card-text">Gender: {results[0].gender}</p>

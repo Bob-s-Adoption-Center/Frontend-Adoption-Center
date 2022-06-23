@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
 const Dogs = () => {
-        let placeholder = 'holder.js/100px180';
+        let placeholder = 'http://holder.js/100px180';
 
         const imagestyle = {
             maxWidth: '100%',

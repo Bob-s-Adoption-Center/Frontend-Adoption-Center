@@ -1,6 +1,7 @@
 module.exports = {
   reactStrictMode: true,
+  
   images: {
-    domains: ['https://theshelterpetproject.org']
+    domains: ['http://holder.js/100px180']
   }
 }

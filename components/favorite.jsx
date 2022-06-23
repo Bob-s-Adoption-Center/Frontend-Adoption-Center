@@ -25,7 +25,7 @@
 
 const FavoriteButton = () => {
     // define the state
-    const [favState, setFavState] = useState(false)
+    // const [favState, setFavState] = useState(false)
 
     toggleFavorite = () => {
         if (favState === false) {
