@@ -15,10 +15,6 @@ export default function Home({ message }) {
 
       <main className="main">
         <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-<<<<<<< HEAD:my-app/pages/index.js
-{/* top dog banner */}
-=======
->>>>>>> 27cee20ad262c164da39149658102703762223c7:pages/index.js
           <div className="col-md-5 p-lg-5 mx-auto my-5">
             <h1 className="display-4 fw-normal">Bob&apos;s Adoption Center</h1>
             <Image
@@ -106,66 +102,6 @@ export default function Home({ message }) {
           </div>
         </div>
 
-<<<<<<< HEAD:my-app/pages/index.js
-        {/*  paws trying another div here */}
-        <h3>
-          <p style={{ textAlign: "center", color: "purple" }}>
-            YOUR PET ADOPTION JOURNEY
-          </p>
-        </h3>
-        <div className="d-md-flex flex-md-equal w-90 my-md-3 ps-md-3">
-          <ul className="side-card me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <li className="my-3 p-3">
-              <img
-                className="card-img-top"
-                src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-search.png"
-                alt="adoption journey"
-                width="500"
-                height="365"
-                style={{width: "40vw", height: "40vh", margin: "auto", justifyContent: "center"}}
-
-              ></img>
-              <h3>Search</h3>
-              <p>
-                It's easy to find a dog who's right for you at a shelter or
-                rescue group. Simply enter your zip code above to start your{" "}
-                <a href="/pet-search/">search</a>.
-              </p>
-            </li>
-            <li className="my-3 p-3">
-              <img
-                className="card-img-top"
-                src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-hearts.png"
-                alt=""
-                width="500"
-                height="365"
-                style={{width: "40vw", height: "40vh", margin: "auto", justifyContent: "center"}}
-              ></img>
-              <h3>Meet</h3>
-              <p>
-                Once you find a pet, click "learn more about me" to get contact
-                info for their shelter or rescue. Contact them to learn more
-                about how to meet and adopt the pet.
-              </p>
-            </li>
-            <li className="my-3 p-3">
-              <img
-                className="card-img-top"
-                src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-house.png"
-                alt=""
-                width="500"
-                height="365"
-                style={{width: "40vw", height: "40vh", margin: "auto", justifyContent: "center"}}
-              ></img>
-              <h3>Adopt</h3>
-              <p>
-                The rescue or shelter will walk you through their adoption
-                process. Prepare your home for the arrival of your dog to help
-                them adjust to their new family.
-              </p>
-            </li>
-          </ul>
-=======
         {/* trying another div here */}
         <div className="content-region  content-region--text-image-grid  content-region--white">
           <div className="content-region__container content-region__container--center">
@@ -228,7 +164,6 @@ export default function Home({ message }) {
               </li>
             </ul>
           </div>
->>>>>>> 27cee20ad262c164da39149658102703762223c7:pages/index.js
         </div>
 
         {/* coloms under */}

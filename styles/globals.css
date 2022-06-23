@@ -259,13 +259,8 @@ p span {
   margin-bottom: 15px;
 }
 
-<<<<<<< HEAD:my-app/styles/globals.css
-#action {
-  background-color: #83D9DB !important;
-=======
 .side-card {
   background-color: #83d9db !important;
->>>>>>> 27cee20ad262c164da39149658102703762223c7:styles/globals.css
 }
 
 #formBody {
