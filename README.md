@@ -12,10 +12,24 @@
 - Vercel deployment - https://vercel.com/bobs-super-team/frontend-adoption-center/7vTjwhQG6BbBGH1yQTPoVassrqTN
 - Docker Deployment - https://bobs-adoption.herokuapp.com/
 
-# CI / CD Additions
+# Tech Stack
+- Next.js (framework)
+- React
+- SQLite (Protected by the use of Bycrypt within our project)
+- Javascript
+- CSS
+- Node.js
+
+# CI / CD Tools
+- Github actions
 - SonarCloud
 - Docker Hub
 - Heroku 
+- Vercel
+
+# Testing
+- Playwright 
+- SonarCloud
 
 # Team Members 
 - Martin Renteria
