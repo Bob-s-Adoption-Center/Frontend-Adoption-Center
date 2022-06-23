@@ -1,5 +1,17 @@
 # Frontend-Adoption-Center
 
+# Live deployments Links
+- Vercel deployment - https://vercel.com/bobs-super-team/frontend-adoption-center/7vTjwhQG6BbBGH1yQTPoVassrqTN
+- Docker Deployment - https://bobs-adoption.herokuapp.com/
+
+# CI / CD Additions
+- SonarCloud
+- Docker Hub
+- Heroku 
+
+#Techonolgies Used
+
+
 # Team Members 
 - Martin Renteria
 - Lamin Suso
