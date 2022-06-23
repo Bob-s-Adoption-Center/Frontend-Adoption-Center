@@ -5,10 +5,11 @@ import Button from 'react-bootstrap/Button';
 import Footer from '../components/footer';
 import NavbarDogs from '../components/navbarDogs';
 import Stack from 'react-bootstrap/Stack';
+import Image from 'next/image';
 
 
 function DogDetail() {
-   
+
     const router = useRouter();
     const { dogId } = router.query;
    
@@ -75,11 +76,13 @@ function DogDetail() {
                 <div className="d-grid gap-2" >
 
                     <Link href={{
-                                    pathname: '/adoptForm/',
-                                    query: { formByDogID: dogState.id },
-                                }}>
+                        pathname: '/adoptForm/',
+                        query: { formByDogID: dogState.id },
+                    }}
+                    passHref
+                    >
 
-                        <Button href="/adoptForm" size="lg" id="adoptBtn">
+                        <Button size="lg" id="adoptBtn">
                         Click to Adopt Me!
                         </Button>
                     </Link>

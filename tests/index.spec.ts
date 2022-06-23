@@ -1,9 +1,8 @@
 // tests/index.spec.ts
-import test from './next-fixture'
-import { expect } from '@playwright/test'
+import { test, expect } from '@playwright/test';
 
-test('book title', async ({ page, port }) => {
-  await page.goto(`http://localhost:${port}/`)
-  const name = await page.innerText('h1')
-  expect(name).toBe("Bob's Adoption Center")
-})
+test('basic test', async ({ page }) => {
+  await page.goto('https://bobs-adoption.herokuapp.com/');
+  const name = await page.innerText('.navbar__brand');
+  expect(name).toBe('Bob\'s Adoption Center');
+});
