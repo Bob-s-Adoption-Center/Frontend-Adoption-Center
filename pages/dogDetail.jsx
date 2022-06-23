@@ -14,7 +14,7 @@ function DogDetail() {
     const { dogId } = router.query;
    
     //use state for data fetch or form submission (because handle change)
-    const [dogState, setDogState] = useState({});
+    const [dogState, setDogState] = useState();
 
     const fetchDogDetail = async () => {
         try {
@@ -61,11 +61,13 @@ function DogDetail() {
                         <h1 className="status">{dogState.status}</h1>
 
                         <div className="dog-img">
-                            <img 
+                            <Image 
                                 id="profile-img"
-                                src={dogState.image} 
+                                src={`/${dogState.image}`} 
                                 alt={"photo of a " + dogState.color + " " + dogState.breed + " named " + dogState.name}
                                 onLoad={handleImageLoad}
+                                width={150}
+                                height={150}
                             />
                         </div>
 
