@@ -1,6 +1,6 @@
 import { ButtonGroup, Button } from "react-bootstrap";
 
-const Buttons = () => {
+const FavButton = () => {
     return (
         <>
             <ButtonGroup size="lg" className="button-block">

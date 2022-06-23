@@ -14,8 +14,8 @@ class Navbar extends Component {
             style={{ color: "#d3b2d1", marginRight: "5px" }}
           />
           <br />
-          <Link className="navbar-brand" href="#" style={{ color: "white" }}>
-            Bob&apos;s Adoption Center
+          <Link href="#">
+            <a className="navbar-brand" style={{ color: "white" }}>Bob&apos;s Adoption Center</a>
           </Link>
           <button
             className="navbar-toggler navbar-dark"
@@ -35,58 +35,31 @@ class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav me-auto mb-2 mb-md-0">
               <li className="nav-item">
-                <Link
-                  className="nav-link active"
-                  aria-current="page"
-                  href="/"
-                  style={{ color: "white" }}
-                  rel="noreferrer"
-                >
-                  Home
+                <Link href="/">
+                  <a className="nav-link active" style={{ color: "white" }} aria-current="page">Home</a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/Dogs">
+                  <a className="nav-link" style={{ color: "white" }}>Dogs</a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link"
-                  href="/Dogs"
-                  style={{ color: "white" }}
-                >
-                  Dogs
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link"
-                  href="https://www.verizon.com/about/news/learn-grow-thrive"
-                  target="_blank"
-                  style={{ color: "white" }}
-                  rel="noreferrer"
-                >
-                  About us
+                  href="https://www.verizon.com/about/news/learn-grow-thrive">
+                  <a className="nav-link" target="_blank" style={{ color: "white" }} rel="noreferrer">About us</a>
                 </Link>
               </li>
             </ul>
             <ul className="nav navbar-nav">
               <li>
-                <Link
-                  className="nav-link active"
-                  style={{ color: "white" }}
-                  aria-current="page"
-                  href="/signin"
-                  rel="noreferrer"
-                >
-                  Login
+                <Link href="/signin">
+                  <a className="nav-link active" style={{ color: "white" }} aria-current="page">Login</a>
                 </Link>
               </li>
               <li>
-                <Link
-                  className="nav-link"
-                  style={{ color: "white" }}
-                  aria-current="page"
-                  href="/signup"
-                  rel="noreferrer"
-                >
-                  Sign-up
+                <Link href="/signup">
+                  <a className="nav-link active" style={{ color: "white" }} aria-current="page" rel="noreferrer">Sign-up</a>
                 </Link>
               </li>
             </ul>

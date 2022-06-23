@@ -11,9 +11,11 @@ class NavbarDogs extends Component {
             icon={faPaw}
             style={{ color: "#d3b2d1", marginRight: "5px" }}
           />
-          <a className="navbar-brand" href="#">
-            Bob&apos;s Adoption Center
-          </a>
+          <Link href="/">
+            <a className="navbar-brand">
+              Bob&apos;s Adoption Center
+            </a>
+          </Link>
           <button
             className="navbar-toggler navbar-light"
             type="button"
@@ -28,19 +30,23 @@ class NavbarDogs extends Component {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav me-auto mb-2 mb-md-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" href="/">
-                  Home
+                <Link href="/">
+                  <a className="nav-link active" aria-current="page">Home</a>
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" href="#">
-                  Contact
-                </a>
+                <Link href="#">
+                  <a className="nav-link active">
+                    Contact
+                  </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" href="#">
-                  About
-                </a>
+                <Link href="#">
+                  <a className="nav-link active">
+                    About
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>

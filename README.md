@@ -1,10 +1,23 @@
 # Frontend-Adoption-Center
 
+# Live deployments Links
+- Vercel deployment - https://vercel.com/bobs-super-team/frontend-adoption-center/7vTjwhQG6BbBGH1yQTPoVassrqTN
+- Docker Deployment - https://bobs-adoption.herokuapp.com/
+
+# CI / CD Additions
+- SonarCloud
+- Docker Hub
+- Heroku 
+
+#Techonolgies Used
+
+
 # Team Members 
 - Martin Renteria
 - Lamin Suso
 - Amanda Renfro
 - Raven Redix 
+- Michael DunnOconnor
 
 # Team Guidelines:
 
@@ -32,3 +45,10 @@
   
   <h3> Asana </h3>
   <img width="911" alt="kanbanboard" src="https://user-images.githubusercontent.com/15171226/153657579-130a125d-27a0-4cd0-b9e3-56619a6d8ff3.PNG">
+
+# How to start project
+
+1. First clone the repository
+2. Open Application
+3. Run npm i
+4. Start the server. Run "npm run dev"
