@@ -4,13 +4,11 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <title>
-          Bob's Adoption Center
-      </title>
+      <title>Bob&apos;s Adoption Center</title>
       <body>
         <Main />
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }

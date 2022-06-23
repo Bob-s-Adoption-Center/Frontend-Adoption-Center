@@ -20,5 +20,5 @@ function FavoriteButton(props) {
                 <a href="/login">Log in to favorite this recipe!</a>
             </span></p>);
     }
-    return <FindInitialState userId={user.user_id} recipeId={props.recipeId}/>
+    // return <FindInitialState userId={user.user_id} recipeId={props.recipeId}/>
 }

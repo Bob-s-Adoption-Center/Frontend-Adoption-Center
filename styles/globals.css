@@ -6,8 +6,6 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-
-
 .body {
   padding-top: 3vh;
   padding-left: 15vw;
@@ -15,8 +13,13 @@ body {
   padding-bottom: 5vh;
   margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background: linear-gradient(#D1B0CF, #D1B0CF 28vh, white 27.75vh, white 100vh );
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: linear-gradient(
+    #d1b0cf,
+    #d1b0cf 28vh,
+    white 27.75vh,
+    white 100vh
+  );
   /* background: linear-gradient(#83D9DB, #83D9DB 28vh, #D1B0CF 27.75vh, #D1B0CF 100vh ); */
   /* background-color: rgb(254, 254, 227); */
   /* background-color: #fefee3; */
@@ -72,12 +75,12 @@ ul {
   border-radius: 50%;
   margin-bottom: 2vh;
   border: 4px solid whitesmoke;
-  outline: 15px solid #D1B0CF; 
+  outline: 15px solid #d1b0cf;
   /* border: 5px solid whitesmoke; */
 }
 
 .navbar {
-  background-color: #83D9DB !important;
+  background-color: #83d9db !important;
 }
 
 /* .main {
@@ -94,10 +97,9 @@ a:hover {
 }
 
 #adoptBtn {
-  background-color: #D1B0CF;
+  background-color: #d1b0cf;
   color: white;
-  border: #D1B0CF
-  
+  border: #d1b0cf;
 }
 
 .view-btn {
@@ -107,12 +109,12 @@ a:hover {
 }
 
 .learn-btn {
-  background-color: #83D9DB !important;
+  background-color: #83d9db !important;
   color: white !important;
   border: none !important;
 }
 
-button .navbar-toggler{
+button .navbar-toggler {
   color: #d3b2d1 !important;
 }
 
@@ -227,7 +229,6 @@ p span {
     display: inline-block;
     flex-direction: row;
   }
-
 }
 
 .adoptForm {
@@ -245,13 +246,11 @@ p span {
   padding-right: 16px;
   color: #23022e;
   justify-content: center;
-
 }
 
 #howToAdopt p {
   text-align: justify;
 }
-
 
 .formSection {
   border: solid rgb(217, 224, 233) 1px;
@@ -260,8 +259,13 @@ p span {
   margin-bottom: 15px;
 }
 
+<<<<<<< HEAD:my-app/styles/globals.css
 #action {
   background-color: #83D9DB !important;
+=======
+.side-card {
+  background-color: #83d9db !important;
+>>>>>>> 27cee20ad262c164da39149658102703762223c7:styles/globals.css
 }
 
 #formBody {
@@ -269,7 +273,7 @@ p span {
 }
 
 .formBanner {
-  background-color: #83D9DB;
+  background-color: #83d9db;
   color: white;
   padding: 10px;
   padding-top: 10vh;
@@ -288,7 +292,6 @@ p span {
   color: white;
   border: magenta;
 }
-
 
 #btmCards a {
   color: #235789;

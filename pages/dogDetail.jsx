@@ -17,7 +17,7 @@ function DogDetail() {
 
     const fetchDogDetail = async () => {
         try {
-            const res = await fetch(`http://localhost:3001/dogs/${dogId}`, {
+            const res = await fetch(`https://bob-s-adoption-center.herokuapp.com/dogs/${dogId}`, {
                 method: 'GET'
             });
             const data = await res.json();
