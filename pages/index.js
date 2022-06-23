@@ -15,10 +15,6 @@ export default function Home({ message }) {
 
       <main className="main">
         <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-<<<<<<< HEAD:my-app/pages/index.js
-{/* top dog banner */}
-=======
->>>>>>> 27cee20ad262c164da39149658102703762223c7:pages/index.js
           <div className="col-md-5 p-lg-5 mx-auto my-5">
             <h1 className="display-4 fw-normal">Bob&apos;s Adoption Center</h1>
             <Image
@@ -27,19 +23,15 @@ export default function Home({ message }) {
               height={174}
               className="img-fluid"
               alt="Responsive image"
-            ></Image> 
+            /> 
             <p className="lead fw-normal">
               Adopting a pet actually saves TWO LIVES as you free up space for
               another animal in need to find lasting love through the wonder of
               adoption.
             </p>
-            {/* <Link
-              className="view-btn btn btn-outline-secondary"
-              style={{ border: "none" }}
-              href="/Dogs"
-            >
-              Look through our pets!
-            </Link> */}
+            <Link href="/Dogs">
+              <a style={{ border: "none" }} className="view-btn btn btn-outline-secondary">Look through our pets!</a>
+            </Link>
           </div>
           <div className="product-device shadow-sm d-none d-md-block"></div>
           <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
@@ -57,13 +49,9 @@ export default function Home({ message }) {
                 animal to be paired with a loving forever family. Change the
                 life of an animal with a little extra TLC today.
               </p>
-              {/* <Link
-                className="view-btn btn btn-outline-secondary"
-                href="https://spca.org/adopt/foster/be-a-foster-hero/"
-                target="_blank"
-              >
-                Get Started
-              </Link> */}
+              <Link href="https://spca.org/adopt/foster/be-a-foster-hero/">
+                <a className="view-btn btn btn-outline-secondary" target="_blank">Get Started</a>
+              </Link>
             </div>
             <div className="bg-light shadow-sm mx-auto"></div>
           </div>
@@ -75,13 +63,9 @@ export default function Home({ message }) {
                 working directly with animals, working behind the scenes or
                 helping out at our next special event.
               </p>
-              {/* <Link
-                className="learn-btn btn btn-outline-secondary"
-                href="https://spca.org/support-us/volunteer/ways-to-volunteer/"
-                target="_blank"
-              >
-                Learn More
-              </Link> */}
+              <Link href="https://spca.org/support-us/volunteer/ways-to-volunteer/">
+                <a className="learn-btn btn btn-outline-secondary" target="_blank">Learn More</a>
+              </Link>
             </div>
             <div className="bg-dark shadow-sm mx-auto"></div>
           </div>
@@ -94,78 +78,14 @@ export default function Home({ message }) {
                 neighborhood, speak up and help put a stop to cruelty and
                 neglect.
               </p>
-              {/* <Link
-                className="view-btn btn btn-outline-secondary"
-                href="https://spca.org/resources/help-animals/report-abuse/animal-cruelty-complaint/"
-                target="_blank"
-              >
-                Report Abuse
-              </Link> */}
+              <Link href="https://spca.org/resources/help-animals/report-abuse/animal-cruelty-complaint/">
+                <a className="view-btn btn btn-outline-secondary" target="_blank">Report Abuse</a>
+              </Link>
             </div>
             <div className="bg-light shadow-sm mx-auto"></div>
           </div>
         </div>
 
-<<<<<<< HEAD:my-app/pages/index.js
-        {/*  paws trying another div here */}
-        <h3>
-          <p style={{ textAlign: "center", color: "purple" }}>
-            YOUR PET ADOPTION JOURNEY
-          </p>
-        </h3>
-        <div className="d-md-flex flex-md-equal w-90 my-md-3 ps-md-3">
-          <ul className="side-card me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <li className="my-3 p-3">
-              <img
-                className="card-img-top"
-                src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-search.png"
-                alt="adoption journey"
-                width="500"
-                height="365"
-                style={{width: "40vw", height: "40vh", margin: "auto", justifyContent: "center"}}
-
-              ></img>
-              <h3>Search</h3>
-              <p>
-                It's easy to find a dog who's right for you at a shelter or
-                rescue group. Simply enter your zip code above to start your{" "}
-                <a href="/pet-search/">search</a>.
-              </p>
-            </li>
-            <li className="my-3 p-3">
-              <img
-                className="card-img-top"
-                src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-hearts.png"
-                alt=""
-                width="500"
-                height="365"
-                style={{width: "40vw", height: "40vh", margin: "auto", justifyContent: "center"}}
-              ></img>
-              <h3>Meet</h3>
-              <p>
-                Once you find a pet, click "learn more about me" to get contact
-                info for their shelter or rescue. Contact them to learn more
-                about how to meet and adopt the pet.
-              </p>
-            </li>
-            <li className="my-3 p-3">
-              <img
-                className="card-img-top"
-                src="https://theshelterpetproject.org/wp-content/uploads/2019/02/image-grid-house.png"
-                alt=""
-                width="500"
-                height="365"
-                style={{width: "40vw", height: "40vh", margin: "auto", justifyContent: "center"}}
-              ></img>
-              <h3>Adopt</h3>
-              <p>
-                The rescue or shelter will walk you through their adoption
-                process. Prepare your home for the arrival of your dog to help
-                them adjust to their new family.
-              </p>
-            </li>
-          </ul>
-=======
         {/* trying another div here */}
         <div className="content-region  content-region--text-image-grid  content-region--white">
           <div className="content-region__container content-region__container--center">
@@ -184,7 +104,7 @@ export default function Home({ message }) {
                     alt=""
                     width="500"
                     height="365"
-                  ></Image>
+                  />
                   <h6>Search</h6>
                   <p>
                     It&apos;s easy to find a dog or cat who&apos;s right for you
@@ -200,7 +120,7 @@ export default function Home({ message }) {
                     alt=""
                     width="500"
                     height="365"
-                  ></Image> 
+                  />
                   <h6>Meet</h6>
                   <p>
                     Once you find a pet, click &quot;learn more about me&quot;
@@ -217,7 +137,7 @@ export default function Home({ message }) {
                     width="500"
                     height="365"
                     overflow-wrap="true"
-                  ></Image>
+                  />
                   <h6>Adopt</h6>
                   <p>
                     The rescue or shelter will walk you through their adoption
@@ -228,15 +148,11 @@ export default function Home({ message }) {
               </li>
             </ul>
           </div>
->>>>>>> 27cee20ad262c164da39149658102703762223c7:pages/index.js
         </div>
 
         {/* coloms under */}
 
-        <div
-          className="d-md-flex flex-md-equal w-90 my-md-3 ps-md-3"
-          id="btmCards"
-        >
+        <div className="d-md-flex flex-md-equal w-90 my-md-3 ps-md-3" id="btmCards">
           <div className="side-card bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div className="my-3 py-3">
               <h4
@@ -249,14 +165,11 @@ export default function Home({ message }) {
                 Your best animal friend deserves the best care, and we are
                 committed to providing services you can afford.
               </p>
-              {/* <Link href="https://www.spca.org/resources/clinic/clinic-services/"
-target="_blank"
-              >
-                <a className="text-link"
-                >
+              <Link href="https://www.spca.org/resources/clinic/clinic-services/">
+                <a className="text-link" target="_blank">
                 See Locations and Services
                 </a>
-              </Link> */}
+              </Link>
             </div>
             <div className="bg-dark shadow-sm mx-auto"></div>
           </div>
@@ -272,13 +185,13 @@ target="_blank"
                 Order medicine, food and even treats online, and they’ll be
                 delivered direct to your door.
               </p>
-              {/* <Link
-                class="text-link"
+              <Link
+                
                 href="https://spcaoftexas3.securevetsource.com/site/view/182142_HomeDelivery.pml"
                 target="_blank"
               >
-                Browse and Shop
-              </Link> */}
+                <a >Browse and Shop</a>
+              </Link>
             </div>
             <div className="bg-dark shadow-sm mx-auto"></div>
           </div>
@@ -294,13 +207,9 @@ target="_blank"
                 You love your pet. Now learn all the best ways to care for him,
                 from training tips to health and safety guidelines.
               </p>
-              {/* <Link
-                class="text-link"
-                href="https://www.spca.org/resources/pet-needs/pet-tips-training/"
-                target="_blank"
-              >
-                Get Expert Help for Your Animal
-              </Link> */}
+              <Link href="https://www.spca.org/resources/pet-needs/pet-tips-training/">
+                <a className="text-link" target="_blank">Get Expert Help for Your Animal</a>
+              </Link>
             </div>
             <div className="bg-light shadow-sm mx-auto"></div>
           </div>
@@ -316,14 +225,14 @@ target="_blank"
                 Check our found pet listings and connect to other shelters so
                 you can be reunited with your pet.
               </p>
-              {/* <Link
-                class="text-link"
+              <Link
+                className="text-link"
                 href="https://www.spca.org/resources/pet-needs/lost-found/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Get Fast Help for a Lost Animal
-              </Link> */}
+              </Link>
             </div>
             <div className="bg-dark shadow-sm mx-auto"></div>
           </div>
@@ -340,13 +249,9 @@ target="_blank"
                 Struggling to provide medical care or food for your pet? We may
                 be able to provide temporary assistance.
               </p>
-              {/* <Link
-                class="text-link"
-                href="https://www.spca.org/resources/pet-needs/support-to-keep-your-pet/"
-                target="_blank"
-              >
-                Learn How We Can Help
-              </Link> */}
+              <Link href="https://www.spca.org/resources/pet-needs/support-to-keep-your-pet/">
+                <a className="text-link" target="_blank">Learn How We Can Help</a>
+              </Link>
             </div>
             <div className="bg-light shadow-sm mx-auto"></div>
           </div>
@@ -363,13 +268,11 @@ target="_blank"
                 Giving up a pet isn’t easy. If you’re wondering what your
                 options are, we’re here to help.
               </p>
-              {/* <Link
-                class="text-link"
+              <Link
                 href="https://www.spca.org/resources/pet-needs/rehome/"
-                target="_blank"
               >
-                Rehoming Options
-              </Link> */}
+                <a className="text-link" target="_blank">Rehoming Options</a>
+              </Link>
             </div>
             <div className="bg-dark shadow-sm mx-auto"></div>
           </div>
