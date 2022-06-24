@@ -25,5 +25,8 @@ FROM base as prod
 RUN npm i
 RUN npm run build
 
+# Adding port
+EXPOSE 8080
+
 # the command to start our app
 CMD [ "npm", "start" ]
