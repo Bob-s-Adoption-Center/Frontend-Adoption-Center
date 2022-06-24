@@ -73,5 +73,8 @@
   <h3> Asana </h3>
   <img width="911" alt="kanbanboard" src="https://user-images.githubusercontent.com/15171226/153657579-130a125d-27a0-4cd0-b9e3-56619a6d8ff3.PNG">
   
+  <h3> Example of Our Organization Settings </h3>
+  ![Example of Our Organization Settings](/diagrams/Merge-Blocking.png)
+  
 # Questions?
   Contact us at renteriamp96@gmail.com and we'll be sure to answer back within 1-3 business days.
