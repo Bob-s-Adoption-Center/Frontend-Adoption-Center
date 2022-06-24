@@ -8,9 +8,16 @@
 4. Start the server. Run "npm run dev" in the terminal 
 5. Happy Coding!
 
+# How to start app from Docker
+
+1. docker pull renteria95/bob
+2. docker ps (lists containers)
+3. docker run -p 3000:3000 bob
+
 # Live deployments Links
+
 - Vercel deployment - [https://vercel.com/bobs-super-team/frontend-adoption-center/7vTjwhQG6BbBGH1yQTPoVassrqTN](https://frontend-adoption-center-a93wgmxpk-bobs-super-team.vercel.app/)
-- Docker Deployment - https://bobs-adoption.herokuapp.com/
+- Docker/Heroku Deployment - https://bobs-adoption.herokuapp.com/
 
 # Tech Stack
 - Next.js (framework)
@@ -19,6 +26,7 @@
 - Javascript
 - CSS
 - Node.js
+- Playwright
 
 # CI / CD Tools
 - Github actions
@@ -52,7 +60,7 @@
 * Trunk based Development - merging to main, feature branches are short lived
 * Active engagement, everyone is heard
 
-## Miro Idea board for initial project planning on features and fixes
+## Miro Idea board for initial project planning on new features and fixes
 
 <img width="578" alt="Miro" src="https://user-images.githubusercontent.com/68476218/174390769-3bf46bdd-b90a-4140-b4c1-2ebf95542b2e.PNG">
 
