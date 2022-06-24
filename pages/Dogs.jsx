@@ -20,9 +20,6 @@ const Dogs = () => {
         };
 
         const favstyle = {
-            // position: 'absolute',
-            // top: '0px',
-            // right: '0px',
             alignSelf: 'flex-end'
         };
 
@@ -90,7 +87,7 @@ const Dogs = () => {
                             }}>
                                 <Card style={{ 
                                     width: '18rem', 
-                                    height: '26rem',
+                                    height: '25rem',
                                     margin: '15px',
                                     boxShadow: '1px 2px 5px grey'
                                     }}>
@@ -116,18 +113,7 @@ const Dogs = () => {
                                         </div>
                                         <div>
                                             <Card.Text style={{ cardBody }}>
-                                                {dog.age} {dog.gender} {dog.breed}
-                                                <br></br> 
-                                                {dog.description.substring(0, 50)}...
-                                                <span>
-                                                    <Link href={{
-                                                        pathname: '/dogDetail/',
-                                                        query: { dogId: dog.id },
-                                                    }}>
-                                                        <a style={{ color: "black" }}>See more</a>
-                                                    </Link>
-                                                </span>   
-                                                
+                                                {dog.age} {dog.gender} {dog.breed} 
                                             </Card.Text>
                                         </div>
                                         <div style={{ 
