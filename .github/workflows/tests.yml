@@ -16,6 +16,9 @@ jobs:
       - name: Install Test Dependencies
         run: npm install -D @playwright/test
         
+      - name: Install browser Dependencies
+        run: npx playwright install
+        
       - name: Run Tests
         run: npm run test
 
