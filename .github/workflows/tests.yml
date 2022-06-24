@@ -12,7 +12,12 @@ jobs:
         with:
           node-version: '14.15.0'
       - run: npm install
-      - run: npm test
+
+      - name: Install Test Dependencies
+        run: npm install -D @playwright/test
+        
+      - name: Run Tests
+        run: npm run test
 
       - name: Tests ✅
         if: ${{ success() }}
