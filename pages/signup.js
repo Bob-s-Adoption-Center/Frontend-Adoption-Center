@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
+import Image from "next/image";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -29,13 +30,13 @@ const SignUp = () => {
     <main className="signInLayout">
       <Navbar />
       <div className="form-signin">
-        <img
+        <Image
           className="signInImage"
           src="./img/dog-banner.png"
           alt="10 dogs sitting alongside side each other serving as the sign in page banner"
           width="275"
           height="75"
-        ></img>
+        />
         <form action="/signup" method="post">
           <h1 className="h3 mb-3 fw-normal" style={{ textAlign: "center" }}>
             Welcome! Please sign up

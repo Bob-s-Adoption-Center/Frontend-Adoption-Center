@@ -5,15 +5,16 @@ import Button from 'react-bootstrap/Button';
 import Footer from '../components/footer';
 import NavbarDogs from '../components/navbarDogs';
 import Stack from 'react-bootstrap/Stack';
+import Image from 'next/image';
 
 
 function DogDetail() {
-   
+
     const router = useRouter();
     const { dogId } = router.query;
    
     //use state for data fetch or form submission (because handle change)
-    const [dogState, setDogState] = useState({});
+    const [dogState, setDogState] = useState();
 
     const fetchDogDetail = async () => {
         try {
@@ -60,11 +61,13 @@ function DogDetail() {
                         <h1 className="status">{dogState.status}</h1>
 
                         <div className="dog-img">
-                            <img 
+                            <Image 
                                 id="profile-img"
-                                src={dogState.image} 
+                                src={`/${dogState.image}`} 
                                 alt={"photo of a " + dogState.color + " " + dogState.breed + " named " + dogState.name}
                                 onLoad={handleImageLoad}
+                                width={150}
+                                height={150}
                             />
                         </div>
 
@@ -75,11 +78,13 @@ function DogDetail() {
                 <div className="d-grid gap-2" >
 
                     <Link href={{
-                                    pathname: '/adoptForm/',
-                                    query: { formByDogID: dogState.id },
-                                }}>
+                        pathname: '/adoptForm/',
+                        query: { formByDogID: dogState.id },
+                    }}
+                    passHref
+                    >
 
-                        <Button href="/adoptForm" size="lg" id="adoptBtn">
+                        <Button size="lg" id="adoptBtn">
                         Click to Adopt Me!
                         </Button>
                     </Link>

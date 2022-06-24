@@ -30,7 +30,7 @@ export default function Home({ message }) {
               adoption.
             </p>
             <Link href="/Dogs">
-              <a style={{ border: "none" }} className="view-btn btn btn-outline-secondary">Look through our pets!</a>
+              <a style={{ border: "none" }} id="view-all-index" className="view-btn btn btn-outline-secondary">Look through our pets!</a>
             </Link>
           </div>
           <div className="product-device shadow-sm d-none d-md-block"></div>
