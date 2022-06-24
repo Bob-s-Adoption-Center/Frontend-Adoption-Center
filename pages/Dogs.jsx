@@ -138,7 +138,7 @@ const Dogs = () => {
                                                 pathname: '/dogDetail/',
                                                 query: { dogId: dog.id },
                                             }}>
-                                                <a className="btn view-btn" style={{ width: '75%', margin: 'auto' }}>View Me!</a>
+                                                <a id={`view-`+ dog.name +`-btn`} className="btn view-btn" style={{ width: '75%', margin: 'auto' }}>View Me!</a>
                                             </Link>
                                         </div>
                                     </Card.Body>
